@@ -19,6 +19,49 @@
   "vim.highlightedyank.duration": 150,
   "vim.highlightedyank.color": "rgba(0, 240, 170, 0.5)",
   "vim.normalModeKeyBindingsNonRecursive": [
+      // di, ['aa', 'bb',]
+    {
+      "before": [
+        "d", "i", ","
+      ],
+      "after": [
+        "f", ",", "l", "d", "2", "T", ","
+      ]
+    },
+    {
+      "before": [
+        "c", "i", ","
+      ],
+      "after": [
+        "f", ",", "l", "c", "2", "T", ","
+      ]
+    },
+    {
+      "before": [
+        "y", "i", ","
+      ],
+      "after": [
+        "f", ",", "l", "y", "2", "T", ","
+      ]
+    },
+    {
+      "before": [
+        "<leader>", "d", "i", ","
+      ],
+      "after": [
+        "f", ",", "l", "\"", "_", "d", "2", "T", ","
+      ]
+    },
+    {
+      "before": [
+        "<leader>", "c", "i", ","
+      ],
+      "after": [
+        "f", ",", "l", "\"", "_", "c", "2", "T", ","
+      ]
+    },
+
+
     {
       "before": [
         "<leader>",
@@ -423,5 +466,10 @@
   "[json]": {
     "editor.defaultFormatter": "vscode.json-language-features"
   },
-  "window.zoomLevel": -1
+  "window.zoomLevel": -1,
+  "remote.SSH.remotePlatform": {
+    "VMware_ubuntu": "linux",
+    "Vmcentos": "linux",
+    "Wsl_ubuntu": "linux"
+  }
 }
