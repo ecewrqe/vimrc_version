@@ -66,6 +66,11 @@ ctrl+alt+t swap position of two words
 `ctrl+alt+t` open terminal  
 `super+tab` or `alt+tab` switch window  
 
+### mac shortcuts
+`command+q` quit the application
+`command+w` close the application
+`command+tab` switch from opened applications
+`command+shift+3,4,5`  screenshot
 
 
 
