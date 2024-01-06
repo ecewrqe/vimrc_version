@@ -13,6 +13,7 @@
 `explorer` file management 
 `%UserProfile%` current user home
 `system32`
+`firewall.cpl`&`fw.msc`
 
 ### some shortcut on windows
 win+shift+s  snapping  
@@ -71,6 +72,7 @@ ctrl+alt+t swap position of two words
 `command+w` close the application
 `command+tab` switch from opened applications
 `command+shift+3,4,5`  screenshot
+`command+option+v` paste of cut
 
 
 
