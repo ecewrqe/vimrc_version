@@ -151,6 +151,7 @@ nnoremap <Leader>e $
 nnoremap yie ggVGy
 nnoremap die ggVGd
 nnoremap <Leader>die ggVG"_d
+nnoremap U u
 
 " select all the buffer
 nnoremap <Leader>n bi
