@@ -1,475 +1,485 @@
 {
-  "workbench.colorTheme": "Default High Contrast",
-  "files.autoSave": "onWindowChange",
-  "editor.fontSize": 20,
-  "vim.targets.smartQuotes.enable": true,
-  "vim.easymotion": true,
-  "vim.incsearch": true,
-  "vim.hlsearch": true,
-  "vim.searchHighlightColor": "rgba(10, 150, 255, 0.6)",
-  "vim.substitutionColor": "rgba(10, 150, 255, 0.6)",
-  "vim.surround": true,
-  "vim.history": 1000,
-  "vim.showcmd": true,
-  "vim.useSystemClipboard": true,
-  "vim.autoindent": true,
-  "vim.smartcase": true,
-  "vim.wrapscan": true,
-  "vim.highlightedyank.enable": true,
-  "vim.highlightedyank.duration": 150,
-  "vim.highlightedyank.color": "rgba(0, 240, 170, 0.5)",
-  "vim.normalModeKeyBindingsNonRecursive": [
-      // di, ['aa', 'bb',]
-    {
-      "before": [
-        "d", "i", ","
-      ],
-      "after": [
-        "f", ",", "l", "d", "2", "T", ","
-      ]
+    "workbench.colorTheme": "Default High Contrast",
+    "files.autoSave": "onWindowChange",
+    "editor.fontSize": 20,
+    "terminal.integrated.scrollback": 20000,
+    "vim.targets.smartQuotes.enable": true,
+    "vim.easymotion": true,
+    "vim.incsearch": true,
+    "vim.hlsearch": true,
+    "vim.searchHighlightColor": "rgba(10, 150, 255, 0.6)",
+    "vim.substitutionColor": "rgba(10, 150, 255, 0.6)",
+    "vim.surround": true,
+    "vim.history": 10000,
+    "vim.showcmd": true,
+    "vim.useSystemClipboard": true,
+    "vim.autoindent": true,
+    "vim.smartcase": true,
+    "vim.wrapscan": true,
+    "vim.highlightedyank.enable": true,
+    "vim.highlightedyank.duration": 150,
+    "vim.highlightedyank.color": "rgba(0, 240, 170, 0.5)",
+    "vim.normalModeKeyBindingsNonRecursive": [
+        // di, ['aa', 'bb',]
+      {
+        "before": [
+          "d", "i", ","
+        ],
+        "after": [
+          "f", ",", "l", "d", "2", "T", ","
+        ]
+      },
+      {
+        "before": [
+          "U"
+        ],
+        "after": [
+          "u"
+        ]
+      },
+      {
+        "before": [
+          "c", "i", ","
+        ],
+        "after": [
+          "f", ",", "l", "c", "2", "T", ","
+        ]
+      },
+      {
+        "before": [
+          "y", "i", ","
+        ],
+        "after": [
+          "f", ",", "l", "y", "2", "T", ","
+        ]
+      },
+      {
+        "before": [
+          "<leader>", "d", "i", ","
+        ],
+        "after": [
+          "f", ",", "l", "\"", "_", "d", "2", "T", ","
+        ]
+      },
+      {
+        "before": [
+          "<leader>", "c", "i", ","
+        ],
+        "after": [
+          "f", ",", "l", "\"", "_", "c", "2", "T", ","
+        ]
+      },
+  
+  
+      {
+        "before": [
+          "<leader>",
+          "d"
+        ],
+        "after": [
+          "\"",
+          "_",
+          "d"
+        ]
+      },
+      {
+        "before":[
+          "<leader>",
+          "D"
+        ],
+        "after": [
+          "\"",
+          "_",
+          "D"
+        ]
+      },
+      {
+        "before": [
+          "<leader>",
+          "c"
+        ],
+        "after": [
+          "\"",
+          "_",
+          "c"
+        ]
+      },
+      {
+        "before":[
+          "<leader>",
+          "C"
+        ],
+        "after": [
+          "\"",
+          "_",
+          "C"
+        ]
+      },
+      {
+        "before": [
+          "<leader>",
+          "x"
+        ],
+        "after": [
+          "\"",
+          "_",
+          "x"
+        ]
+      },
+      {
+        "before": [
+          "<leader>",
+          "s"
+        ],
+        "after": [
+          "\"",
+          "_",
+          "s"
+        ]
+      },
+      {
+        "before": [
+          "<leader>",
+          "A"
+        ],
+        "after": [
+          "g",
+          "g",
+          "V",
+          "G"
+        ]
+      },
+      {
+        "before": [
+          "<leader>",
+          "a"
+        ],
+        "after": [
+          "^"
+        ]
+      },
+      {
+        "before": [
+          "<leader>",
+          "e"
+        ],
+        "after": [
+          "$"
+        ]
+      },
+      {
+        "before": [
+          "<leader>",
+          "n"
+        ],
+        "after": [
+          "b",
+          "i"
+        ]
+      },
+      {
+        "before": [
+          "<leader>",
+          "N"
+        ],
+        "after": [
+          "B",
+          "i"
+        ]
+      },
+      {
+        "before": [
+          "<leader>",
+          "m"
+        ],
+        "after": [
+          "e",
+          "a"
+        ]
+      },
+      {
+        "before": [
+          "<leader>",
+          "M"
+        ],
+        "after": [
+          "E",
+          "a"
+        ]
+      },
+      {
+        "before": [
+          "y", "i", "e"
+        ],
+        "after": [
+          "g", "g", "V", "G", "y"
+        ]
+      },
+      {
+        "before": [
+          "d", "i", "e"
+        ],
+        "after": [
+          "g", "g", "V", "G", "d"
+        ]
+      },
+      {
+        "before": [
+          "<leader>", "d", "i", "e"
+        ],
+        "after": [
+          "g", "g", "V", "G", "\"", "_", "d"
+        ]
+      },
+      {
+        "before": [
+          "<C-n>"
+        ],
+        "commands": [
+          ":nohl"
+        ]
+      },
+      {
+        "before": [
+          "<leader>",
+          "o"
+        ],
+        "commands": [
+          ":only"
+        ]
+      },
+      {
+        "before": [
+          "<tab>",
+          "o"
+        ],
+        "commands": [
+          ":tabonly"
+        ]
+      },
+    ],
+    "vim.visualModeKeyBindingsNonRecursive": [
+      {
+        "before": [
+          "<leader>",
+          "d"
+        ],
+        "after": [
+          "\"",
+          "_",
+          "d"
+        ]
+      },
+      {
+        "before":[
+          "<leader>",
+          "D"
+        ],
+        "after": [
+          "\"",
+          "_",
+          "D"
+        ]
+      },
+      {
+        "before": [
+          "<leader>",
+          "c"
+        ],
+        "after": [
+          "\"",
+          "_",
+          "c"
+        ]
+      },
+      {
+        "before": [
+          "<leader>",
+          "C"
+        ],
+        "after": [
+          "\"",
+          "_",
+          "C"
+        ]
+      },
+      {
+        "before": [
+          "<leader>",
+          "x"
+        ],
+        "after": [
+          "\"",
+          "_",
+          "x"
+        ]
+      },
+      {
+        "before": [
+          "<leader>",
+          "s"
+        ],
+        "after": [
+          "\"",
+          "_",
+          "s"
+        ]
+      },
+      {
+        "before": [
+          "<leader>",
+          "a"
+        ],
+        "after": [
+          "^"
+        ]
+      },
+      {
+        "before": [
+          "<leader>",
+          "e"
+        ],
+        "after": [
+          "$"
+        ]
+      },
+    ],
+    "vim.handleKeys": {
+      "<C-d>": true,
+      "<C-s>": false,
+      "<C-z>": false
     },
-    {
-      "before": [
-        "c", "i", ","
-      ],
-      "after": [
-        "f", ",", "l", "c", "2", "T", ","
-      ]
-    },
-    {
-      "before": [
-        "y", "i", ","
-      ],
-      "after": [
-        "f", ",", "l", "y", "2", "T", ","
-      ]
-    },
-    {
-      "before": [
-        "<leader>", "d", "i", ","
-      ],
-      "after": [
-        "f", ",", "l", "\"", "_", "d", "2", "T", ","
-      ]
-    },
-    {
-      "before": [
-        "<leader>", "c", "i", ","
-      ],
-      "after": [
-        "f", ",", "l", "\"", "_", "c", "2", "T", ","
-      ]
-    },
-
-
-    {
-      "before": [
-        "<leader>",
-        "d"
-      ],
-      "after": [
-        "\"",
-        "_",
-        "d"
-      ]
-    },
-    {
-      "before":[
-        "<leader>",
-        "D"
-      ],
-      "after": [
-        "\"",
-        "_",
-        "D"
-      ]
-    },
-    {
-      "before": [
-        "<leader>",
-        "c"
-      ],
-      "after": [
-        "\"",
-        "_",
-        "c"
-      ]
-    },
-    {
-      "before":[
-        "<leader>",
-        "C"
-      ],
-      "after": [
-        "\"",
-        "_",
-        "C"
-      ]
-    },
-    {
-      "before": [
-        "<leader>",
-        "x"
-      ],
-      "after": [
-        "\"",
-        "_",
-        "x"
-      ]
-    },
-    {
-      "before": [
-        "<leader>",
-        "s"
-      ],
-      "after": [
-        "\"",
-        "_",
-        "s"
-      ]
-    },
-    {
-      "before": [
-        "<leader>",
-        "A"
-      ],
-      "after": [
-        "g",
-        "g",
-        "V",
-        "G"
-      ]
-    },
-    {
-      "before": [
-        "<leader>",
-        "a"
-      ],
-      "after": [
-        "^"
-      ]
-    },
-    {
-      "before": [
-        "<leader>",
-        "e"
-      ],
-      "after": [
-        "$"
-      ]
-    },
-    {
-      "before": [
-        "<leader>",
-        "n"
-      ],
-      "after": [
-        "b",
-        "i"
-      ]
-    },
-    {
-      "before": [
-        "<leader>",
-        "N"
-      ],
-      "after": [
-        "B",
-        "i"
-      ]
-    },
-    {
-      "before": [
-        "<leader>",
-        "m"
-      ],
-      "after": [
-        "e",
-        "a"
-      ]
-    },
-    {
-      "before": [
-        "<leader>",
-        "M"
-      ],
-      "after": [
-        "E",
-        "a"
-      ]
-    },
-    {
-      "before": [
-        "y", "i", "e"
-      ],
-      "after": [
-        "g", "g", "V", "G", "y"
-      ]
-    },
-    {
-      "before": [
-        "d", "i", "e"
-      ],
-      "after": [
-        "g", "g", "V", "G", "d"
-      ]
-    },
-    {
-      "before": [
-        "<leader>", "d", "i", "e"
-      ],
-      "after": [
-        "g", "g", "V", "G", "\"", "_", "d"
-      ]
-    },
-    {
-      "before": [
-        "<C-n>"
-      ],
-      "commands": [
-        ":nohl"
-      ]
-    },
-    {
-      "before": [
-        "<leader>",
-        "o"
-      ],
-      "commands": [
-        ":only"
-      ]
-    },
-    {
-      "before": [
-        "<tab>",
-        "o"
-      ],
-      "commands": [
-        ":tabonly"
-      ]
-    },
-  ],
-  "vim.visualModeKeyBindingsNonRecursive": [
-    {
-      "before": [
-        "<leader>",
-        "d"
-      ],
-      "after": [
-        "\"",
-        "_",
-        "d"
-      ]
-    },
-    {
-      "before":[
-        "<leader>",
-        "D"
-      ],
-      "after": [
-        "\"",
-        "_",
-        "D"
-      ]
-    },
-    {
-      "before": [
-        "<leader>",
-        "c"
-      ],
-      "after": [
-        "\"",
-        "_",
-        "c"
-      ]
-    },
-    {
-      "before": [
-        "<leader>",
-        "C"
-      ],
-      "after": [
-        "\"",
-        "_",
-        "C"
-      ]
-    },
-    {
-      "before": [
-        "<leader>",
-        "x"
-      ],
-      "after": [
-        "\"",
-        "_",
-        "x"
-      ]
-    },
-    {
-      "before": [
-        "<leader>",
-        "s"
-      ],
-      "after": [
-        "\"",
-        "_",
-        "s"
-      ]
-    },
-    {
-      "before": [
-        "<leader>",
-        "a"
-      ],
-      "after": [
-        "^"
-      ]
-    },
-    {
-      "before": [
-        "<leader>",
-        "e"
-      ],
-      "after": [
-        "$"
-      ]
-    },
-  ],
-  "vim.handleKeys": {
-    "<C-d>": true,
-    "<C-s>": false,
-    "<C-z>": false
-  },
-  "vim.insertModeKeyBindingsNonRecursive": [],
-  "vim.leader": "<space>",
-  "vim.overrideCopy": true,
-  "vim.neovimConfigPath": "~/.config/nvim/init.vim",
-  "vim.neovimPath": "/usr/bin/nvim",
-  "vim.neovimUseConfigFile": true,
-  "vim.enableNeovim": true,
-  "editor.quickSuggestions": {
-    "comments": "on",
-    "strings": "on"
-  },
-  "editor.suggest.snippetsPreventQuickSuggestions": true,
-  "[java]": {
+    "vim.insertModeKeyBindingsNonRecursive": [],
+    "vim.leader": "<space>",
+    "vim.overrideCopy": true,
+    "vim.neovimConfigPath": "~/.config/nvim/init.vim",
+    "vim.neovimPath": "/usr/bin/nvim",
+    "vim.neovimUseConfigFile": true,
+    "vim.enableNeovim": true,
     "editor.quickSuggestions": {
       "comments": "on",
       "strings": "on"
-    }
-  },
-  "editor.mouseWheelZoom": true,
-  "editor.wordWrap": "on",
-  "workbench.iconTheme": "material-icon-theme",
-  "php-intellisense.trace.server": "messages",
-  "intelephense.files.associations": [
-    "*.blade.php",
-    "*.php",
-    "*.phtml"
-  ],
-  "blade.format.enable": true,
-  "bladeFormatter.format.indentInnerHtml": true,
-  "bladeFormatter.format.sortTailwindcssClasses": true,
-  "php.inlayHints.types.suppressVariableFromLiteral": false,
-  "[php]": {
-    "editor.defaultFormatter": "DEVSENSE.phptools-vscode"
-  },
-  "intelephense.environment.includePaths": [
-    "E:\\MySoft\\php-8.2"
-  ],
-  "files.associations": {
-    "*.blade.php": "blade",
-    "*.css": "tailwindcss"
-  },
-  "files.readonlyFromPermissions": true,
-  "css.lint.unknownAtRules": "ignore",
-  "[javascript]": {
-    "editor.defaultFormatter": "vscode.typescript-language-features"
-  },
-  "workbench.preferredDarkColorTheme": "Default High Contrast",
-  "intelephense.stubs": [
-    "apache",
-    "bcmath",
-    "bz2",
-    "calendar",
-    "com_dotnet",
-    "Core",
-    "ctype",
-    "curl",
-    "date",
-    "dba",
-    "dom",
-    "enchant",
-    "exif",
-    "FFI",
-    "fileinfo",
-    "filter",
-    "fpm",
-    "ftp",
-    "gd",
-    "gettext",
-    "gmp",
-    "hash",
-    "iconv",
-    "imap",
-    "intl",
-    "json",
-    "ldap",
-    "libxml",
-    "mbstring",
-    "meta",
-    "mysqli",
-    "oci8",
-    "odbc",
-    "openssl",
-    "pcntl",
-    "pcre",
-    "PDO",
-    "pdo_ibm",
-    "pdo_mysql",
-    "pdo_pgsql",
-    "pdo_sqlite",
-    "pgsql",
-    "Phar",
-    "posix",
-    "pspell",
-    "random",
-    "readline",
-    "Reflection",
-    "session",
-    "shmop",
-    "SimpleXML",
-    "snmp",
-    "soap",
-    "sockets",
-    "sodium",
-    "SPL",
-    "sqlite3",
-    "standard",
-    "superglobals",
-    "sysvmsg",
-    "sysvsem",
-    "sysvshm",
-    "tidy",
-    "tokenizer",
-    "xml",
-    "xmlreader",
-    "xmlrpc",
-    "xmlwriter",
-    "xsl",
-    "Zend OPcache",
-    "zip",
-    "zlib",
-    "yaml"
-  ],
-  "intelephense.environment.phpVersion": "8.2",
-  "[json]": {
-    "editor.defaultFormatter": "vscode.json-language-features"
-  },
-  "window.zoomLevel": -1,
-  "remote.SSH.remotePlatform": {
-    "VMware_ubuntu": "linux",
-    "Vmcentos": "linux",
-    "Wsl_ubuntu": "linux"
+    },
+    "editor.suggest.snippetsPreventQuickSuggestions": true,
+    "[java]": {
+      "editor.quickSuggestions": {
+        "comments": "on",
+        "strings": "on"
+      }
+    },
+    "editor.mouseWheelZoom": true,
+    "editor.wordWrap": "on",
+    "workbench.iconTheme": "material-icon-theme",
+    "php-intellisense.trace.server": "messages",
+    "intelephense.files.associations": [
+      "*.blade.php",
+      "*.php",
+      "*.phtml"
+    ],
+    "blade.format.enable": true,
+    "bladeFormatter.format.indentInnerHtml": true,
+    "bladeFormatter.format.sortTailwindcssClasses": true,
+    "php.inlayHints.types.suppressVariableFromLiteral": false,
+    "[php]": {
+      "editor.defaultFormatter": "DEVSENSE.phptools-vscode"
+    },
+    "intelephense.environment.includePaths": [
+      "E:\\MySoft\\php-8.2"
+    ],
+    "files.associations": {
+      "*.blade.php": "blade",
+      "*.css": "tailwindcss"
+    },
+    "files.readonlyFromPermissions": true,
+    "css.lint.unknownAtRules": "ignore",
+    "[javascript]": {
+      "editor.defaultFormatter": "vscode.typescript-language-features"
+    },
+    "workbench.preferredDarkColorTheme": "Default High Contrast",
+    "intelephense.stubs": [
+      "apache",
+      "bcmath",
+      "bz2",
+      "calendar",
+      "com_dotnet",
+      "Core",
+      "ctype",
+      "curl",
+      "date",
+      "dba",
+      "dom",
+      "enchant",
+      "exif",
+      "FFI",
+      "fileinfo",
+      "filter",
+      "fpm",
+      "ftp",
+      "gd",
+      "gettext",
+      "gmp",
+      "hash",
+      "iconv",
+      "imap",
+      "intl",
+      "json",
+      "ldap",
+      "libxml",
+      "mbstring",
+      "meta",
+      "mysqli",
+      "oci8",
+      "odbc",
+      "openssl",
+      "pcntl",
+      "pcre",
+      "PDO",
+      "pdo_ibm",
+      "pdo_mysql",
+      "pdo_pgsql",
+      "pdo_sqlite",
+      "pgsql",
+      "Phar",
+      "posix",
+      "pspell",
+      "random",
+      "readline",
+      "Reflection",
+      "session",
+      "shmop",
+      "SimpleXML",
+      "snmp",
+      "soap",
+      "sockets",
+      "sodium",
+      "SPL",
+      "sqlite3",
+      "standard",
+      "superglobals",
+      "sysvmsg",
+      "sysvsem",
+      "sysvshm",
+      "tidy",
+      "tokenizer",
+      "xml",
+      "xmlreader",
+      "xmlrpc",
+      "xmlwriter",
+      "xsl",
+      "Zend OPcache",
+      "zip",
+      "zlib",
+      "yaml"
+    ],
+    "intelephense.environment.phpVersion": "8.2",
+    "[json]": {
+      "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "window.zoomLevel": -1,
+    "remote.SSH.remotePlatform": {
+      "VMware_ubuntu": "linux",
+      "Vmcentos": "linux",
+      "Wsl_ubuntu": "linux"
+    },
+    "redhat.telemetry.enabled": true
   }
-}
