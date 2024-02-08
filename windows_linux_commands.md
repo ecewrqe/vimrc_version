@@ -74,5 +74,18 @@ ctrl+alt+t swap position of two words
 `command+shift+3,4,5`  screenshot
 `command+option+v` paste of cut
 
+### vscode raw shortcut
+`command+o` open folder
+`command+shift+o` open new window
+`command+k o`  copy script to new window
+`command+option+t` close other window
+
+### vim
+`control+n` nohighlight
+`tab+o` close other window
+`option+command+{|}`  fold|open code in curly brace
+
+
+
 
 
