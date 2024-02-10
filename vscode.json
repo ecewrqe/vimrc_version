@@ -19,6 +19,16 @@
     "vim.highlightedyank.enable": true,
     "vim.highlightedyank.duration": 150,
     "vim.highlightedyank.color": "rgba(0, 240, 170, 0.5)",
+    "vim.insertModeKeyBindings": [
+      {
+        "before": [
+          "¥"
+        ],
+        "after": [
+          "\\"
+        ]
+      },
+    ],
     "vim.normalModeKeyBindingsNonRecursive": [
         // di, ['aa', 'bb',]
       {
@@ -475,11 +485,11 @@
     "[json]": {
       "editor.defaultFormatter": "vscode.json-language-features"
     },
-    "window.zoomLevel": -1,
     "remote.SSH.remotePlatform": {
       "VMware_ubuntu": "linux",
       "Vmcentos": "linux",
       "Wsl_ubuntu": "linux"
     },
-    "redhat.telemetry.enabled": true
-  }
+    "redhat.telemetry.enabled": true,
+    "editor.accessibilitySupport": "on"
+}
