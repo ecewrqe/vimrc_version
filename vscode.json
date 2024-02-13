@@ -492,5 +492,7 @@
       "Wsl_ubuntu": "linux"
     },
     "redhat.telemetry.enabled": true,
-    "editor.accessibilitySupport": "on"
+    "editor.accessibilitySupport": "on",
+    "terminal.integrated.rightClickBehavior": "paste",
+    "terminal.integrated.copyOnSelection": true
 }
