@@ -394,9 +394,6 @@
     "[php]": {
       "editor.defaultFormatter": "DEVSENSE.phptools-vscode"
     },
-    "intelephense.environment.includePaths": [
-      "E:\\MySoft\\php-8.2"
-    ],
     "files.associations": {
       "*.blade.php": "blade",
       "*.css": "tailwindcss"
@@ -485,11 +482,6 @@
     "intelephense.environment.phpVersion": "8.2",
     "[json]": {
       "editor.defaultFormatter": "vscode.json-language-features"
-    },
-    "remote.SSH.remotePlatform": {
-      "VMware_ubuntu": "linux",
-      "Vmcentos": "linux",
-      "Wsl_ubuntu": "linux"
     },
     "redhat.telemetry.enabled": true,
     "editor.accessibilitySupport": "on",
