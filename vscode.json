@@ -42,6 +42,166 @@
       },
       {
         "before": [
+          "y", "s", "i", "w", "<leader>"
+        ],
+        "after": [
+          "e", "a", "<leader>", "<Escape>", "b", "i", "<leader>", "<Escape>", "l"
+        ]
+      },
+      {
+        "before": [
+          "y", "s", "i", "w", "%"
+        ],
+        "after": [
+          "e", "a", "%", "<Escape>", "h", "b", "i", "%", "<Escape>", "l"
+        ]
+      },
+      {
+        "before": [
+          "y", "s", "i", "W", "%"
+        ],
+        "after": [
+          "f", "<leader>", "a", "%", "<Escape>", "2", "h", "F", "<leader>", "i", "%", "<Escape>", "l"
+        ]
+      },
+      {
+        "before": [
+          "y", "s", "i", "w", "$"
+        ],
+        "after": [
+          "e", "a", "$", "<Escape>", "h", "b", "i", "$", "<Escape>", "l"
+        ]
+      },
+      {
+        "before": [
+          "y", "s", "i", "W", "$"
+        ],
+        "after": [
+          "f", "<leader>", "a", "$", "<Escape>", "2", "h", "F", "<leader>", "i", "$", "<Escape>", "l"
+        ]
+      },
+      {
+        "before": [
+          "y", "s", "i", "w", "#"
+        ],
+        "after": [
+          "e", "a", "#", "<Escape>", "h", "b", "i", "#", "<Escape>", "l"
+        ]
+      },
+      {
+        "before": [
+          "y", "s", "i", "W", "#"
+        ],
+        "after": [
+          "f", "<leader>", "a", "#", "<Escape>", "2", "h", "F", "<leader>", "i", "#", "<Escape>", "l"
+        ]
+      },
+      {
+        "before": [
+          "y", "s", "i", "w", "*"
+        ],
+        "after": [
+          "e", "a", "#", "<Escape>", "h", "b", "i", "#", "<Escape>", "l"
+        ]
+      },
+      {
+        "before": [
+          "y", "s", "i", "W", "*"
+        ],
+        "after": [
+          "f", "<leader>", "a", "*", "<Escape>", "2", "h", "F", "<leader>", "i", "*", "<Escape>", "l"
+        ]
+      },
+      {
+        "before": [
+          "y", "s", "i", "w", "'"
+        ],
+        "after": [
+          "e", "a", "'", "<Escape>", "h", "b", "i", "'", "<Escape>", "l"
+        ]
+      },
+      {
+        "before": [
+          "y", "s", "i", "W", "'"
+        ],
+        "after": [
+          "f", "<leader>", "a", "'", "<Escape>", "2", "h", "F", "<leader>", "i", "'", "<Escape>", "l"
+        ]
+      },
+      {
+        "before": [
+          "y", "s", "i", "w", "\""
+        ],
+        "after": [
+          "e", "a", "\"", "<Escape>", "h", "b", "i", "\"", "<Escape>", "l"
+        ]
+      },
+      {
+        "before": [
+          "y", "s", "i", "W", "\""
+        ],
+        "after": [
+          "f", "<leader>", "a", "\"", "<Escape>", "2", "h", "F", "<leader>", "i", "\"", "<Escape>", "l"
+        ]
+      },
+      {
+        "before": [
+          "d", "s", "<leader>"
+        ],
+        "after": [
+          "f", "<leader>", "x", "F","<leader>","x"
+        ]
+      },
+      {
+        "before": [
+          "y", "s", "i", "<", "<leader>"
+        ],
+        "after": [
+          "f", ">", "i", "<leader>", "<Escape>", "F", "<", "a", "<leader>", "<Escape>", "l",
+        ]
+      },
+      {
+        "before": [
+          "y", "s", "i", "(", "<leader>"
+        ],
+        "after": [
+          "f", ")", "i", "<leader>", "<Escape>", "F", "(", "a", "<leader>", "<Escape>", "l",
+        ]
+      },
+      {
+        "before": [
+          "y", "s", "i", "[", "<leader>"
+        ],
+        "after": [
+          "f", "]", "i", "<leader>", "<Escape>", "F", "[", "a", "<leader>", "<Escape>", "l",
+        ]
+      },
+      {
+        "before": [
+          "y", "s", "i", "{", "<leader>"
+        ],
+        "after": [
+          "f", "}", "i", "<leader>", "<Escape>", "F", "{", "a", "<leader>", "<Escape>", "l",
+        ]
+      },
+      {
+        "before": [
+          "d", "s", "<"
+        ],
+        "after": [
+          "f", ">", "x", "F","<","x"
+        ]
+      },
+      {
+        "before": [
+          "d", "s", "%"
+        ],
+        "after": [
+          "f", "%", "x", "F","%","x"
+        ]
+      },
+      {
+        "before": [
           "U"
         ],
         "after": [
@@ -394,6 +554,9 @@
     "[php]": {
       "editor.defaultFormatter": "DEVSENSE.phptools-vscode"
     },
+    "intelephense.environment.includePaths": [
+      "E:\\MySoft\\php-8.2"
+    ],
     "files.associations": {
       "*.blade.php": "blade",
       "*.css": "tailwindcss"
@@ -483,8 +646,13 @@
     "[json]": {
       "editor.defaultFormatter": "vscode.json-language-features"
     },
+    "remote.SSH.remotePlatform": {
+      "VMware_ubuntu": "linux",
+      "Vmcentos": "linux",
+      "Wsl_ubuntu": "linux"
+    },
     "redhat.telemetry.enabled": true,
     "editor.accessibilitySupport": "on",
-    "terminal.integrated.rightClickBehavior": "paste",
-    "terminal.integrated.copyOnSelection": true
+    // "terminal.integrated.rightClickBehavior": "paste",
+    // "terminal.integrated.copyOnSelection": true
 }
