@@ -85,7 +85,9 @@ ctrl+alt+t swap position of two words
 `tab+o` close other window
 `option+command+{|}`  fold|open code in curly brace
 
-
-
-
-
+### powershell Emacs keybind
+```powershell
+Import-Module PSReadLine
+Set-PSReadlineOption -EditMode Emacs
+Set-PSReadlineKeyHandler -Key Ctrl+d -Function DeleteChar
+```
