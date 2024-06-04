@@ -80,14 +80,18 @@ ctrl+alt+t swap position of two words
 `command+k o`  copy script to new window
 `command+option+t` close other window
 
-### vim
-`control+n` nohighlight
-`tab+o` close other window
-`option+command+{|}`  fold|open code in curly brace
-
 ### powershell Emacs keybind
 ```powershell
 Import-Module PSReadLine
 Set-PSReadlineOption -EditMode Emacs
 Set-PSReadlineKeyHandler -Key Ctrl+d -Function DeleteChar
 ```
+
+### emacs style command on terminal
+`C-e`, `C-a`, `M-c`, `M-b`, 
+`C-r` search history
+`M-d`, `M-w` delete a word after/before cursor
+`C-k`, `C-u` delete all characters after/before cursor
+`C-y` yank
+`C-m` new line
+
