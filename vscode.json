@@ -1,4 +1,9 @@
 // vscode setting.json(無、水雷屯)
+/*
+extensions: 
+vim emulation
+Material Icon Theme
+*/
 {
     "workbench.colorTheme": "Default High Contrast",
     "files.autoSave": "onWindowChange",
