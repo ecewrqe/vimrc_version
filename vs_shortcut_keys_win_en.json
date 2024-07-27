@@ -19,6 +19,15 @@
         "when": "editorTextFocus && vim.active && vim.use<C-o> && !inDebugRepl"
     },
     {
+        "key": "ctrl+r",
+        "command": "workbench.action.openRecent"
+    },
+    {
+        "key": "ctrl+r",
+        "command": "extension.vim_ctrl+r",
+        "when": "editorTextFocus && vim.active && vim.use<C-r> && !inDebugRepl"
+    },
+    {
         "key": "ctrl+i",
         "command": "extension.vim_ctrl+i",
         "when": "editorTextFocus && vim.active && vim.use<C-i> && !inDebugRepl"
@@ -52,12 +61,8 @@
         "command": "workbench.action.closeWindow"
     },
     {
-        "key": "ctrl+k ctrl+s",
+        "key": "ctrl+k ctrl+shift+s",
         "command": "workbench.action.openGlobalKeybindings"
-    },
-    {
-        "key": "ctrl+r",
-        "command": "workbench.action.openRecent"
     },
     {
         "key": "ctrl+shift+y",
