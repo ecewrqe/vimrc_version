@@ -24,6 +24,11 @@ set number
 source ~/.config/nvim/blueprint/keybind.vim
 source ~/.config/nvim/blueprint/options.vim
 
+let lsp_log_verbose=1
+let lsp_log_file = expand('~/lsp.log')
+let g:lsp_settings_filetype_vue = ['volar-server', 'typescript-language-server', 'vtsls', 'eslint-language-server', 'html-languageserver']
+
+let g:lsp_settings_filetype_html = ['html-languageserver']
 
 
 
@@ -41,6 +46,14 @@ if has('nvim')
     Plug 'tpope/vim-commentary'
     Plug 'machakann/vim-highlightedyank'
     Plug 'preservim/nerdtree'
+
+    Plug 'prabirshrestha/vim-lsp'
+    Plug 'mattn/vim-lsp-settings'
+    Plug 'hrsh7th/vim-vsnip'
+    Plug 'hrsh7th/vim-vsnip-integ'
+
+    Plug 'ycm-core/youcompleteme'
+
     call plug#end()
 else
     " if empty(glob('~/.vim/autoload/plug.vim'))
@@ -50,10 +63,28 @@ else
     " call plug#begin('~/.vim/plugged')
 endif
 
+let g:ycm_clangd_binary_path = trim(system('brew --prefix llvm')).'/bin/clangd'
+
 " nmap y <Plug>(highlightedyank)
 " xmap y <Plug>(highlightedyank)
 " omap y <Plug>(highlightedyank)
 " let g:highlightedyank_highlight_duration = 1000
+function! s:on_lsp_buffer_enabled() abort
+    if &buftype ==# 'nofile' || &filetype =~# '^\(quickrun\)' || getcmdwintype() ==# ':'
+        return
+    endif
+    setlocal omnifunc=lsp#complete
+
+    nmap <buffer> gd <plug>(lsp-definition)
+    nmap <buffer> <f2> <plug>(lsp-rename)
+    nmap <buffer> <c-k> <plug>(lsp-hover)
+endfunction
+
+augroup vimcr_lsp_install
+    autocmd!
+    autocmd User lsp_buffer_enabled call s:on_lsp_buffer_enabled()
+augroup END
+
 
 
 " STATUS LINE ------------:----------------

@@ -4,6 +4,8 @@ filetype indent on
 
 syntax enable
 filetype plugin indent on
+
+set modifiable
 set encoding=UTF-8
 set fileencoding=utf-8
 set fileencodings=UTF-8,SJIS
@@ -11,6 +13,8 @@ scriptencoding utf-8
 set showtabline=1
 set mouse= 
 set fileformat=unix
+
+" set backupdir=./.vimbackup/
 
 set bufhidden
 set linebreak
@@ -90,3 +94,7 @@ set infercase
 set colorcolumn=80
 set shiftround
 
+
+" autocmd BufWritePre *.log let &bex='-'..strftime("%Y%m%d")
+
+set fillchars=stl:^,stlnc:=,vert:│,fold:·,diff:-

@@ -15,6 +15,9 @@ nnoremap yie ggVGy
 nnoremap die ggVGd
 nnoremap <Leader>die ggVG"_d
 
+" go debug
+nnoremap <F5> :!go run %<CR>
+
 
 vnoremap <Leader>d "_d
 vnoremap <Leader>D "_D
