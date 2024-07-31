@@ -42,12 +42,14 @@ let g:lsp_settings_filetype_vue = ['volar-server', 'typescript-language-server',
 let g:lsp_settings_filetype_html = ['html-languageserver']
 
 " terminal
+
 if has("win32")
-    let $shell = executable('pwsh') ? 'pwsh' : 'powershell -NoLogo -ExecutionPolicy RemoteSigned -NoExit -Command "[Console]::InputEncoding=[Console]::OutputEncoding=[System.Text.UTF8Encoding]::new();$PSDefaultParameterValues[''Out-File'']=''utf8'';Set-PSReadlineOption -EditMode Emacs;Set-PSReadlineKeyHandler -Key Ctrl+d -Function DeleteChar"'
+    let &shell = 'powershell'
+    let &shellcmdflag = '-NoLogo -ExecutionPolicy RemoteSigned -Command [Console]::InputEncoding=[Console]::OutputEncoding=[System.Text.UTF8Encoding]::new();$PSDefaultParameterValues[''Out-File:Encoding'']=''utf8'';'
 
     let &shellredir = '2>&1 | %%{ "$_" } | Out-File %s; exit $LastExitCode'
     let &shellpipe = '2>&1 | %%{ "$_" } | Tee-Object %s; exit $LastExitCode'
-    " set shellquote= shellxquote=
+    set shellquote= shellxquote=
 endif
 
 " Mappings code goes here.
@@ -56,6 +58,12 @@ endif
 
 if has('nvim')
     if has('win32')
+        if empty(glob('~/AppData/Local/nvim/autoload/plug.vim'))
+            silent !Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim' -OutFile '~/AppData/Local/nvim/autoload/plug.vim'
+
+            autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+        endif
+        call plug#begin('~/.vim/plugged')
     else
         if empty(glob('~/.config/nvim/autoload/plug.vim'))
             silent !curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
