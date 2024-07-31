@@ -1,7 +1,4 @@
 filetype on
-filetype plugin on
-filetype indent on
-
 syntax enable
 filetype plugin indent on
 
@@ -13,6 +10,7 @@ scriptencoding utf-8
 set showtabline=1
 set mouse= 
 set fileformat=unix
+set fileformats=unix,dos,mac
 
 " set backupdir=./.vimbackup/
 
