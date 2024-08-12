@@ -91,6 +91,7 @@ Plug 'hrsh7th/vim-vsnip'
 Plug 'hrsh7th/vim-vsnip-integ'
 
 Plug 'ycm-core/youcompleteme'
+Plug 'puremourning/vimspector'
 
 call plug#end()
 
@@ -119,22 +120,12 @@ augroup END
 
 " go debug
 
-function! s:Exe_program()
-    if (&ft == 'go')
-        nnoremap <F5> :!go run %<CR>
-    elseif (&ft == "pl")
-        function! s:Exe_perl()
-        let file_name = @%
-        let _exe_command = '!perl '.file_name
-        exec _exe_command
-    endif
-endfunction
-
-nnoremap <F5> :Exe_program()<CR>
-
 " nerd Tree focus
 nnoremap <Leader>n :NERDTreeFocus<CR>
 nnoremap <Leader>t :NERDTreeToggle<CR>
 nnoremap <Leader>f :NERDTreeFind<CR>
 " STATUS LINE ------------:----------------
 
+let g:vimspector_enable_mappings = 'HUMAN'
+nmap <Leader>di <Plug>VimspectorBalloonEval
+xmap <Leader>di <Plug>VimspectorBalloonEval

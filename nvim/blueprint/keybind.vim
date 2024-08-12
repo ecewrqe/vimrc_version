@@ -15,8 +15,6 @@ nnoremap yie ggVGy
 nnoremap die ggVGd
 nnoremap <Leader>die ggVG"_d
 
-" go debug
-nnoremap <F5> :!go run %<CR>
 
 
 vnoremap <Leader>d "_d
@@ -77,7 +75,4 @@ nnoremap <Leader>f :NERDTreeFind<CR>
 
 " autocmd VimEnter * NERDTree
 
-" invrightleft
-noremap <F9> :set invrl!<CR> " invrightleft
-inoremap <F9> <Esc>:set invrl!<CR>a
 
