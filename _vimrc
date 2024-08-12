@@ -1,19 +1,13 @@
-"euewrqe(無 水雷屯)
+"euewrqe(辟｡ 豌ｴ髮ｷ螻ｯ)
 "source ~/.vimrc
 " Vim with all enhancements
 " customize
-
+" language en_US
 " Disable compatibility with vi which can cause unexpected issues
 if !has('nvim')
     set nocompatible
 endif
 " Enable type file detection.
-filetype on
-filetype plugin on
-" Load an indent file for the detected file type.
-filetype indent on
-" Turn syntax highlighting on
-syntax enable
 " 1 -> blinking block
 " 2 -> solid block
 " 3 -> blinking underscore
@@ -25,29 +19,43 @@ let &t_SI = "\e[5 q" "SI = INSERT mode
 let &t_SR = "\e[4 q" "SR = REPLACE mode
 let &t_EI = "\e[1 q" "EI = NORMAL mode
 
+colorscheme elflord
+
+highlight HighlightedyankRegion cterm=reverse gui=reverse
+
+filetype on
+syntax enable
+filetype plugin indent on
+
 set number
+set modifiable
 set encoding=UTF-8
-" set fileencoding=utf-8
+set fileencoding=utf-8
+set fileencodings=UTF-8,SJIS
 scriptencoding utf-8
-set ffs=unix,dos,mac
-set nocompatible
+set showtabline=1
+set mouse=
+set fileformat=unix
+set fileformats=unix,dos,mac
+" 
+set linebreak
+set breakindent
+syntax case match
 
-if has('linebreak')
-    set textwidth=120
-    set linebreak
-    set breakindent
-    set breakindentopt=shift:2
-
-    let &showbreak = '↳ '
-    set cpo+=n
+set list
+set listchars+=eol:¬
+if has('clipboard')
+    if has('unnamedplus')
+        set clipboard=unnamed,unnamedplus
+    else
+        set clipboard=unnamed
+    endif
 endif
 
 set joinspaces
 set whichwrap+=<,>
-
 set cmdheight=1
 set laststatus=2
-
 
 set incsearch
 set hlsearch
@@ -62,23 +70,7 @@ set cursorline
 set history=1000
 set ruler
 set rulerformat=%30(%=\:b%n%y%m%r%w\ %l,%c%V\ %P%)
-
 set signcolumn=auto " yes
-set noerrorbells
-set visualbell
-
-if has('clipboard')
-    if has('unnamedplus')
-        set clipboard=unnamed,unnamedplus
-    else
-        set clipboard=unnamed
-    endif
-endif
-set cindent
-"set autowrite
-"set bufhidden=hide
-set belloff=
-set mouse=a
 
 set nobackup
 set scrolloff=10
@@ -93,7 +85,6 @@ set ignorecase
 set smartcase
 set showmode
 set showmatch
-set showcmd
 
 " set shell=/bin/bash
 set splitright
@@ -106,35 +97,14 @@ set wildignore+=*.jpg,*.bmp,*.gif,*.png,*.jpeg
 set wildignore+=*.aux,*.out,*.toc
 set wildignore+=*.o,*.obj,*.exe,*.dll,*.manifest
 set wildignore+=*.pyc,*.class
-set list
-
-set completeopt=longest,menu,menuone,noselect
-set infercase
-
-
-set colorcolumn=80
-set shiftround
-
-if has("gui_running")
-    set background=dark
-    colorscheme evening
-    set guifont=Consolas:h20
-    set guioptions-=T
-    set guioptions-=L
-    set guioptions-=r
-    " menu bar
-    set guioptions-=m
-    set guioptions-=b
-    set lines=75
-    set columns=180
-else
-    colorscheme morning
-endif
-
-"map Q gq
-nnoremap <c-a> ^
-nnoremap <c-e> $
-
+" 
+" set completeopt=longest,menu,menuone,noselect
+" set infercase
+" 
+" 
+" set colorcolumn=80
+" set shiftround
+" 
 
 " PLUGINS --------------------------------
 " plugin code goes here.
@@ -145,13 +115,22 @@ nnoremap <Leader>D "_D
 nnoremap <Leader>c "_c
 nnoremap <Leader>C "_C
 nnoremap <Leader>x "_x
-nnoremap <Leader>s "_s
-nnoremap <Leader>a ^
-nnoremap <Leader>e $
+nnoremap <Leader>s "_s nnoremap <Leader>S "_S
+nnoremap <Leader>a ggVG
 nnoremap yie ggVGy
 nnoremap die ggVGd
 nnoremap <Leader>die ggVG"_d
-nnoremap U u
+
+
+
+vnoremap <Leader>d "_d
+vnoremap <Leader>D "_D
+vnoremap <Leader>c "_c
+vnoremap <Leader>C "_C
+vnoremap <Leader>x "_x
+vnoremap <Leader>s "_s
+vnoremap <Leader>S "_S
+vnoremap <Leader>a ggVG
 
 " select all the buffer
 nnoremap <Leader>n bi
@@ -162,26 +141,15 @@ noremap <Leader>T :terminal<CR>
 noremap <Leader>lsp :vsp<CR>
 noremap <Leader>bsp :sp<CR>
 
-noremap <C-t>l :vsp<CR>:terminal<CR>i
+noremap <C-t>l :vsp<CR>:terminal<CR>
 tnoremap <C-t> exit<CR><CR>
-noremap <C-t>b :sp<CR>:terminal<CR>i
+noremap <C-t>b :sp<CR>:terminal<CR>
 
 
 noremap <C-Left> <C-w><
 noremap <C-Right> <C-w>>
 noremap <C-Up> <C-w>+
 noremap <C-Down> <C-w>-
-
-" delete without copy
-vnoremap <Leader>d "_d
-vnoremap <Leader>D "_D
-vnoremap <Leader>c "_c
-vnoremap <Leader>C "_C
-vnoremap <Leader>x "_x
-vnoremap <Leader>s "_s
-vnoremap <Leader>a ^
-vnoremap <Leader>e $
-vnoremap ie <Esc>ggVG
 
 
 
@@ -191,47 +159,116 @@ noremap <C-H> <C-W>h
 noremap <C-L> <C-W>l
 
 " gj gk gt gT gJ gI bp|bn
+tnoremap <Esc> <C-¥><C-n>
 
-nnoremap <A-m> :bn<CR>  " buffer next
-nnoremap <A-n> :bp<CR>  " buffer prev
-nnoremap <A-d> :bd<CR>  " buffer delet
-nnoremap <C-p> :tabonly<CR>
-nnoremap <C-o> :only<CR>
-nnoremap <C-n> :tabnew<CR>
+" commadn mode movement like emacs
+cnoremap <C-F> <Right>
+cnoremap <C-B> <Left>
+cnoremap <C-A> <Home>
+cnoremap <A-B> <S-Left>
+cnoremap <A-F> <S-Right>
+cnoremap <Esc>b <S-Left>
+cnoremap <Esc>f <S-Right>
+cnoremap <C-D> <Del>
+
+nnoremap <C-K><C-,> :e $MYVIMRC<CR>
+nnoremap <C-K><C-N> :set hlsearch!<CR>
+
+
 " invrightleft
-noremap <F9> :set invrl!<CR> " invrightleft
-inoremap <F9> <Esc>:set invrl!<CR>a
+ 
+ 
+ 
+ if has("win32")
+     exec "source "..stdpath('config').."¥¥blueprint¥¥colorscheme.vim"
+     exec "source "..stdpath('config').."¥¥blueprint¥¥keybind.vim"
+     exec "source "..stdpath('config').."¥¥blueprint¥¥options.vim"
+ 
+     " source $USERPROFILE¥AppData¥Local¥nvim¥blueprint¥colorscheme.vim
+     " source $USERPROFILE¥AppData¥Local¥nvim¥blueprint¥keybind.vim
+     " source $USERPROFILE¥AppData¥Local¥nvim¥blueprint¥options.vim
+ else
+     if has("nvim")
+         source ~/.config/nvim/blueprint/colorscheme.vim
+         source ~/.config/nvim/blueprint/keybind.vim
+         source ~/.config/nvim/blueprint/options.vim
+         source ~/.config/nvim/blueprint/lsp_config.vim
+     endif
+ endif
 
-nnoremap <Leader>rn :set relativenumber!<CR>
+" let lsp_log_verbose=1
+" let lsp_log_file = expand('~/lsp.log')
+" let g:lsp_settings_filetype_vue = ['volar-server', 'typescript-language-server', 'vtsls', 'eslint-language-server', 'html-languageserver']
+" 
+" let g:lsp_settings_filetype_html = ['html-languageserver']
+
+" terminal
+
+if has("win32")
+    let &shell = 'powershell'
+    let &shellcmdflag = '-NoLogo -ExecutionPolicy RemoteSigned -Command [Console]::InputEncoding=[Console]::OutputEncoding=[System.Text.UTF8Encoding]::new();$PSDefaultParameterValues[''Out-File:Encoding'']=''utf8'';'
+
+    let &shellredir = '2>&1 | %%{ "$_" } | Out-File %s; exit $LastExitCode'
+    let &shellpipe = '2>&1 | %%{ "$_" } | Tee-Object %s; exit $LastExitCode'
+    set shellquote= shellxquote=
+endif
 
 " Mappings code goes here.
 
 " vim plugin-------------------------------
 
 if has('nvim')
-    if empty(glob('~/.config/nvim/autoload/plug.vim'))
-        silent !curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-        autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+    if has('win32')
+        if empty(glob('~/AppData/Local/nvim/autoload/plug.vim'))
+            silent !New-Item -Path ~/AppData/Local/nvim/autoload/ -ItemType Directory
+            silent !Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim' -OutFile '~/AppData/Local/nvim/autoload/plug.vim'
+
+            autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+        endif
+        call plug#begin('~/.vim/plugged')
+    else
+        if empty(glob('~/.config/nvim/autoload/plug.vim'))
+            silent !mkdir -p ~/.config/nvim/autoload/
+            silent !curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+            autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+        endif
+        call plug#begin('~/.config/nvim/plugged')
     endif
-    call plug#begin('~/.config/nvim/plugged')
-    Plug 'tpope/vim-surround'
-    Plug 'tpope/vim-commentary'
-    Plug 'machakann/vim-highlightedyank'
-    call plug#end()
 else
-    " if empty(glob('~/.vim/autoload/plug.vim'))
-    "     silent !curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-    "     autocmd VimEnter PlugInstall --sync | source $MYVIMRC
-    " endif
-    " call plug#begin('~/.vim/plugged')
+    if empty(glob('~/.vim/autoload/plug.vim'))
+        silent !mkdir -p ~/.vim/autoload/
+        silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+        autocmd VimEnter PlugInstall --sync | source $MYVIMRC
+    endif
+    call plug#begin('~/.vim/plugged')
 endif
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-commentary'
+Plug 'machakann/vim-highlightedyank'
+Plug 'preservim/nerdtree'
+
+call plug#end()
 
 
-" nmap y <Plug>(highlightedyank)
-" xmap y <Plug>(highlightedyank)
-" omap y <Plug>(highlightedyank)
-" let g:highlightedyank_highlight_duration = 1000
-highlight HighlightedyankRegion cterm=reverse gui=reverse
+" nerd Tree focus
+nnoremap <Leader>n :NERDTreeFocus<CR>
+nnoremap <Leader>t :NERDTreeToggle<CR>
+nnoremap <Leader>f :NERDTreeFind<CR>
+
+" autocmd VimEnter * NERDTree
+
 
 " STATUS LINE ------------:----------------
+"
+
+
+" go debug
+" perl debug
+function! s:Exe_perl()
+    let file_name = @%
+    let _exe_command = '!perl '.file_name
+    exec _exe_command
+endfunction
+nnoremap <F5> :call Exe_perl()<CR>
+
 

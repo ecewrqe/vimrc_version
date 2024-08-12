@@ -2,7 +2,7 @@
 "source ~/.vimrc
 " Vim with all enhancements
 " customize
-language en_US
+" language en_US
 " Disable compatibility with vi which can cause unexpected issues
 if !has('nvim')
     set nocompatible
@@ -19,7 +19,6 @@ let &t_SI = "\e[5 q" "SI = INSERT mode
 let &t_SR = "\e[4 q" "SR = REPLACE mode
 let &t_EI = "\e[1 q" "EI = NORMAL mode
 
-set number
 if has("win32")
     exec "source "..stdpath('config').."\\blueprint\\colorscheme.vim"
     exec "source "..stdpath('config').."\\blueprint\\keybind.vim"
@@ -59,6 +58,7 @@ endif
 if has('nvim')
     if has('win32')
         if empty(glob('~/AppData/Local/nvim/autoload/plug.vim'))
+            silent !New-Item -Path ~/AppData/Local/nvim/autoload -ItemType Directory
             silent !Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim' -OutFile '~/AppData/Local/nvim/autoload/plug.vim'
 
             autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
@@ -66,6 +66,7 @@ if has('nvim')
         call plug#begin('~/.vim/plugged')
     else
         if empty(glob('~/.config/nvim/autoload/plug.vim'))
+            silent !mkdir -p ~/.config/nvim/autoload
             silent !curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
             autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
         endif
@@ -73,7 +74,8 @@ if has('nvim')
     endif
 else
     if empty(glob('~/.vim/autoload/plug.vim'))
-        silent !curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+        silent !mkdir -p ~/.vim/autoload
+        silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
         autocmd VimEnter PlugInstall --sync | source $MYVIMRC
     endif
     call plug#begin('~/.vim/plugged')
@@ -115,6 +117,24 @@ augroup vimcr_lsp_install
 augroup END
 
 
+" go debug
 
+function! s:Exe_program()
+    if (&ft == 'go')
+        nnoremap <F5> :!go run %<CR>
+    elseif (&ft == "pl")
+        function! s:Exe_perl()
+        let file_name = @%
+        let _exe_command = '!perl '.file_name
+        exec _exe_command
+    endif
+endfunction
+
+nnoremap <F5> :Exe_program()<CR>
+
+" nerd Tree focus
+nnoremap <Leader>n :NERDTreeFocus<CR>
+nnoremap <Leader>t :NERDTreeToggle<CR>
+nnoremap <Leader>f :NERDTreeFind<CR>
 " STATUS LINE ------------:----------------
 

@@ -19,7 +19,6 @@ set linebreak
 set breakindent
 syntax case match
 
-set ffs=unix,dos,mac
 set nocompatible
 
 set listchars+=space:–,eol:¬
