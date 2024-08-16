@@ -3,11 +3,23 @@
 extensions: 
 vim emulation
 Material Icon Theme
+GitLens
+GitHub Copilot
+Remote - SSH
+Docker
+SQLTools
+[bash]
+Bash IDE/Bash Debug
+[perl]
+Perl(LSP)/Perl Navigator/Perl Debug Adapter
 */
 {
     "workbench.colorTheme": "Default High Contrast",
     "files.autoSave": "onWindowChange",
+    "editor.tabSize": 2,
     "editor.fontSize": 20,
+    "editor.comments.insertSpace": true,
+    "editor.detectIndentation": true,
     "terminal.integrated.scrollback": 20000,
     "vim.targets.smartQuotes.enable": true,
     "vim.easymotion": true,
@@ -537,7 +549,21 @@ Material Icon Theme
     "[javascript]": {
       "editor.defaultFormatter": "vscode.typescript-language-features"
     },
+    "editor.autoIndent": "full",
+    "[go]": {
+      "editor.insertSpaces": true,
+      "editor.formatOnSave": false,
+      "editor.defaultFormatter": "golang.go",
+      "editor.codeActionsOnSave": {
+        "source.organizeImports": "never"
+      }
+    },
     "workbench.preferredDarkColorTheme": "Default High Contrast",
     "terminal.integrated.rightClickBehavior": "paste",
-    "terminal.integrated.copyOnSelection": true
+    "terminal.integrated.copyOnSelection": true,
+    "editor.insertSpaces": true,
+    "editor.stickyScroll.enabled": false,
+    "terminal.integrated.fontSize": 15,
+    "terminal.integrated.sendKeybindingsToShell": true,
+    "grunt.autoDetect": "on"
 }

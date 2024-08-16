@@ -6,8 +6,28 @@
         "when": "terminal.active"
     },
     {
+        "key": "ctrl+shift+1",
+        "command": "workbench.debug.action.toggleRepl"
+    },
+    {
         "key": "ctrl+shift+p",
         "command": "workbench.action.showCommands"
+    },
+    {
+        "key": "ctrl+shift+3",
+        "command": "workbench.action.findInFiles"
+    },
+    {
+        "key": "ctrl+shift+4",
+        "command": "workbench.view.scm"
+    },
+    {
+        "key": "ctrl+shift+5",
+        "command": "workbench.view.extensions"
+    },
+    {
+        "key": "ctrl+shift+D",
+        "command": "workbench.view.debug"
     },
     {
         "key": "ctrl+o",
