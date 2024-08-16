@@ -107,19 +107,23 @@
     },
     {
         "key": "ctrl+w v",
-        "command": "workbench.action.splitEditor"
+        "command": "workbench.action.splitEditor",
+        "when": "!terminalFocus"
     },
     {
         "key": "ctrl+w s",
-        "command": "workbench.action.splitEditorDown"
+        "command": "workbench.action.splitEditorDown",
+        "when": "!terminalFocus"
     },
     {
         "key": "ctrl+w c",
-        "command": "workbench.action.closeActiveEditor"
+        "command": "workbench.action.closeActiveEditor",
+        "when": "!terminalFocus"
     },
     {
         "key": "ctrl+w h",
-        "command": "workbench.action.focusLeftGroup"
+        "command": "workbench.action.focusLeftGroup",
+        "when": "!terminalFocus"
     },
     {
         "key": "ctrl+k ctrl+left",
@@ -151,7 +155,8 @@
     },
     {
         "key": "ctrl+w shift+k",
-        "command": "workbench.action.moveActiveEditorGroupUp"
+        "command": "workbench.action.moveActiveEditorGroupUp",
+        "when": "!terminalFocus"
     },
     {
         "key": "ctrl+k up",
@@ -159,7 +164,8 @@
     },
     {
         "key": "ctrl+w k",
-        "command": "workbench.action.focusAboveGroup"
+        "command": "workbench.action.focusAboveGroup",
+        "when": "!terminalFocus"
     },
     {
         "key": "ctrl+k ctrl+up",
@@ -167,11 +173,13 @@
     },
     {
         "key": "ctrl+w j",
-        "command": "workbench.action.focusBelowGroup"
+        "command": "workbench.action.focusBelowGroup",
+        "when": "!terminalFocus"
     },
     {
         "key": "ctrl+k ctrl+down",
         "command": "-workbench.action.focusBelowGroup"
+
     },
     {
         "key": "ctrl+w shift+j",
@@ -226,5 +234,60 @@
         "key": "ctrl+shift+d",
         "command": "workbench.view.debug",
         "when": "viewContainer.workbench.view.debug.enabled"
+    },
+    {
+        "key": "ctrl+shift+j",
+        "command": "workbench.action.compareEditor.nextChange",
+        "when": "textCompareEditorVisible"
+    },
+    {
+        "key": "ctrl+shift+j",
+        "command": "workbench.action.editor.nextChange",
+        "when": "editorTextFocus && !textCompareEditorActive"
+    },
+    {
+        "key": "ctrl+shift+k",
+        "command": "workbench.action.compareEditor.previousChange",
+        "when": "textCompareEditorVisible"
+    },
+    {
+        "key": "ctrl+shift+k",
+        "command": "workbench.action.editor.previousChange",
+        "when": "editorTextFocus && !textCompareEditorActive"
+    },
+    {
+        "key": "ctrl+shift+l",
+        "command": "workbench.action.compareEditor.focusPrimarySide"
+    },
+    {
+        "key": "ctrl+shift+h",
+        "command": "workbench.action.compareEditor.focusSecondarySide"
+    },
+    {
+        "key": "alt+f5",
+        "command": "-workbench.action.compareEditor.nextChange",
+        "when": "textCompareEditorVisible"
+    },
+    {
+        "key": "alt+f5",
+        "command": "-workbench.action.editor.nextChange",
+        "when": "editorTextFocus && !textCompareEditorActive"
+    },
+    {
+        "key": "shift+alt+f5",
+        "command": "-workbench.action.compareEditor.previousChange",
+        "when": "textCompareEditorVisible"
+    },
+    {
+        "key": "shift+alt+f5",
+        "command": "-workbench.action.editor.previousChange",
+        "when": "editorTextFocus && !textCompareEditorActive"
+    },
+    {
+        "key": "ctrl+shift+i",
+        "command": "workbench.action.compareEditor.swapSides"
     }
 ]
+
+
+

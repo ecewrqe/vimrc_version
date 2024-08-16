@@ -20,6 +20,11 @@ Perl(LSP)/Perl Navigator/Perl Debug Adapter
     "editor.fontSize": 20,
     "editor.comments.insertSpace": true,
     "editor.detectIndentation": true,
+    "workbench.colorCustomizations": {
+        "diffEditor.insertedTextBackground": "#0b5236",
+        "diffEditor.removedTextBackground": "#54141b",
+        "diffEditor.modifiedTextBackground": "#0b5236"
+    },
     "terminal.integrated.scrollback": 20000,
     "vim.targets.smartQuotes.enable": true,
     "vim.easymotion": true,
