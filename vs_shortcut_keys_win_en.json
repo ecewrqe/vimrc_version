@@ -26,10 +26,6 @@
         "command": "workbench.view.extensions"
     },
     {
-        "key": "ctrl+shift+D",
-        "command": "workbench.view.debug"
-    },
-    {
         "key": "ctrl+o",
         "command": "workbench.action.files.openFile"
     },
@@ -126,32 +122,16 @@
         "when": "!terminalFocus"
     },
     {
-        "key": "ctrl+k ctrl+left",
-        "command": "-workbench.action.focusLeftGroup"
-    },
-    {
         "key": "ctrl+w shift+h",
         "command": "workbench.action.moveActiveEditorGroupLeft"
-    },
-    {
-        "key": "ctrl+k left",
-        "command": "-workbench.action.moveActiveEditorGroupLeft"
     },
     {
         "key": "ctrl+w l",
         "command": "workbench.action.focusRightGroup"
     },
     {
-        "key": "ctrl+k ctrl+right",
-        "command": "-workbench.action.focusRightGroup"
-    },
-    {
         "key": "ctrl+w shift+l",
         "command": "workbench.action.moveActiveEditorGroupRight"
-    },
-    {
-        "key": "ctrl+k right",
-        "command": "-workbench.action.moveActiveEditorGroupRight"
     },
     {
         "key": "ctrl+w shift+k",
@@ -159,17 +139,9 @@
         "when": "!terminalFocus"
     },
     {
-        "key": "ctrl+k up",
-        "command": "-workbench.action.moveActiveEditorGroupUp"
-    },
-    {
         "key": "ctrl+w k",
         "command": "workbench.action.focusAboveGroup",
         "when": "!terminalFocus"
-    },
-    {
-        "key": "ctrl+k ctrl+up",
-        "command": "-workbench.action.focusAboveGroup"
     },
     {
         "key": "ctrl+w j",
@@ -177,17 +149,8 @@
         "when": "!terminalFocus"
     },
     {
-        "key": "ctrl+k ctrl+down",
-        "command": "-workbench.action.focusBelowGroup"
-
-    },
-    {
         "key": "ctrl+w shift+j",
         "command": "workbench.action.moveActiveEditorGroupDown"
-    },
-    {
-        "key": "ctrl+k down",
-        "command": "-workbench.action.moveActiveEditorGroupDown"
     },
     {
         "key": "ctrl+b",
@@ -286,8 +249,21 @@
     {
         "key": "ctrl+shift+i",
         "command": "workbench.action.compareEditor.swapSides"
+    },
+    {
+        "key": "ctrl+x ctrl+f",
+        "command": "explorer.newFile"
+    },
+    {
+        "key": "ctrl+x ctrl+n",
+        "command": "workbench.action.files.newUntitledFile"
+    },
+    {
+        "key": "cmd+n",
+        "command": "-workbench.action.files.newUntitledFile"
+    },
+    {
+        "key": "ctrl+x ctrl+d",
+        "command": "deleteFile"
     }
 ]
-
-
-
