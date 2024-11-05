@@ -12,7 +12,7 @@ cd ~/Project
 
 echo "==== pre install ===="
 sudo yum update && sudo yum upgrade -y
-sudo yum install git net-tools iputils-ping neovim sshpass -y
+sudo yum install git sshpass -y
 
 if [[ $? != 0 ]]; then
     exit
@@ -29,18 +29,17 @@ fi
 
 echo "==== send id_rsd to host euewrqe@${CONNECT_IP} ===="
 
-if [[ $(grep "${CONNECT_IP}" ~/.ssh/known_hosts) ]]; then
+if ! grep -q "${CONNECT_IP}" ~/.ssh/known_hosts ; then
     ssh euewrqe@${CONNECT_IP} ls
 fi
-
 sshpass -p ${PASSWORD} scp ~/.ssh/id_rsa euewrqe@${CONNECT_IP}:~/.ssh/${HOSTNAME}
+
 
 # git config soon
 
 echo "==== github initialize ===="
 git config --global user.name euewrqe
 git config --global user.email euewrqe@gmail.com
-exit
 
 
 echo "==== add new ssh id_rsa to github ===="

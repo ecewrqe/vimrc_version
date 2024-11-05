@@ -30,9 +30,7 @@ git config --global user.name euewrqe
 git config --global user.email euewrqe@gmail.com
 
 
-echo "==== add new ssh id_rsa to github ===="
-[ ! -e /usr/bin/gh ] && /bin/bash github_config.sh
-[ -z `/usr/bin/gh auth status|grep Logged|wc -l` ] && /usr/bin/gh auth login
+echo "copy id_rsa.pub to github ssh keys setting"
 
 if test ! -e ~/Project/vimrc_version; then
     echo "==== config vimrc ===="
@@ -43,7 +41,8 @@ fi
 [ ! -e "~/.config/nvim" ] && mkdir -p ~/.config/nvim
 
 mkdir -p ~/.config/nvim
+PATH_PRE="~/Project"
 cp -rf vimrc_version/nvim/* ~/.config/nvim
-cp -f vimrc_version/_vimrc ~/.vimrc
+cp -f ${PATH_PRE}/vimrc_version/_vimrc ~/.vimrc
 
 
