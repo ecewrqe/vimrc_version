@@ -20,6 +20,7 @@ let &t_SR = "\e[4 q" "SR = REPLACE mode
 let &t_EI = "\e[1 q" "EI = NORMAL mode
 
 if has("win32")
+    exec "source "..stdpath('config').."\\blueprint\\plugs.vim"
     exec "source "..stdpath('config').."\\blueprint\\colorscheme.vim"
     exec "source "..stdpath('config').."\\blueprint\\keybind.vim"
     exec "source "..stdpath('config').."\\blueprint\\options.vim"
@@ -28,6 +29,7 @@ if has("win32")
     " source $USERPROFILE\AppData\Local\nvim\blueprint\keybind.vim
     " source $USERPROFILE\AppData\Local\nvim\blueprint\options.vim
 else
+    source ~/.config/nvim/blueprint/plugs.vim
     source ~/.config/nvim/blueprint/colorscheme.vim
     source ~/.config/nvim/blueprint/keybind.vim
     source ~/.config/nvim/blueprint/options.vim
@@ -55,45 +57,6 @@ endif
 
 " vim plugin-------------------------------
 
-if has('nvim')
-    if has('win32')
-        if empty(glob('~/AppData/Local/nvim/autoload/plug.vim'))
-            silent !New-Item -Path ~/AppData/Local/nvim/autoload -ItemType Directory
-            silent !Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim' -OutFile '~/AppData/Local/nvim/autoload/plug.vim'
-
-            autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
-        endif
-        call plug#begin('~/.vim/plugged')
-    else
-        if empty(glob('~/.config/nvim/autoload/plug.vim'))
-            silent !mkdir -p ~/.config/nvim/autoload
-            silent !curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-            autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
-        endif
-        call plug#begin('~/.config/nvim/plugged')
-    endif
-else
-    if empty(glob('~/.vim/autoload/plug.vim'))
-        silent !mkdir -p ~/.vim/autoload
-        silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-        autocmd VimEnter PlugInstall --sync | source $MYVIMRC
-    endif
-    call plug#begin('~/.vim/plugged')
-endif
-Plug 'tpope/vim-surround'
-Plug 'tpope/vim-commentary'
-Plug 'machakann/vim-highlightedyank'
-Plug 'preservim/nerdtree'
-
-Plug 'prabirshrestha/vim-lsp'
-Plug 'mattn/vim-lsp-settings'
-Plug 'hrsh7th/vim-vsnip'
-Plug 'hrsh7th/vim-vsnip-integ'
-
-Plug 'ycm-core/youcompleteme'
-Plug 'puremourning/vimspector'
-
-call plug#end()
 
 let g:ycm_clangd_binary_path = trim(system('brew --prefix llvm')).'/bin/clangd'
 

@@ -2,6 +2,7 @@ filetype on
 syntax enable
 filetype plugin indent on
 
+set number
 set modifiable
 set encoding=UTF-8
 set fileencoding=utf-8
@@ -11,6 +12,7 @@ set showtabline=1
 set mouse= 
 set fileformat=unix
 set fileformats=unix,dos,mac
+set completeopt=menuone,noinsert,noselect
 
 " set backupdir=./.vimbackup/
 
@@ -21,8 +23,6 @@ syntax case match
 
 set nocompatible
 
-set listchars+=space:–,eol:¬
-set list
 if has('clipboard')
     if has('unnamedplus')
         set clipboard=unnamed,unnamedplus
@@ -55,8 +55,12 @@ set rulerformat=%30(%=\:b%n%y%m%r%w\ %l,%c%V\ %P%)
 
 set signcolumn=auto " yes
 
+if (has("termguicolors"))
+    set termguicolors
+endif
 set nobackup
-set scrolloff=10
+set nowritebackup
+" set scrolloff=10
 set wrap
 set wrapscan
 set numberwidth=4
@@ -94,4 +98,5 @@ set shiftround
 
 " autocmd BufWritePre *.log let &bex='-'..strftime("%Y%m%d")
 
-set fillchars=stl:^,stlnc:=,vert:│,fold:·,diff:-
+" set fillchars=stl:^,stlnc:=,vert:│,fold:·,diff:-
+
