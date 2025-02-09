@@ -68,7 +68,7 @@ set numberwidth=4
 set title
 set titlestring=" %F "
 
-set guifont=Consolas:h18
+" set guifont=Consolas:h18
 
 set ignorecase
 set smartcase

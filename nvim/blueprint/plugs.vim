@@ -28,6 +28,13 @@ Plug 'tpope/vim-commentary'
 Plug 'machakann/vim-highlightedyank'
 Plug 'preservim/nerdtree'
 
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#left_sep = ' '
+let g:airline#extensions#tabline#left_alt_sep = '|'
+let g:airline#extensions#tabline#formatter = 'default'
+
 Plug 'szw/vim-maximizer'
 " Plug 'christoomey/vim-tmux-navigator'
 Plug 'kassio/neoterm'
@@ -41,6 +48,8 @@ Plug 'hrsh7th/vim-vsnip-integ'
 Plug 'ycm-core/youcompleteme'
 Plug 'puremourning/vimspector'
 Plug 'github/copilot.vim'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'CopilotC-Nvim/CopilotChat.nvim'
 
 Plug 'tomasiser/vim-code-dark'
 Plug 'pangloss/vim-javascript'
@@ -49,14 +58,22 @@ Plug 'itchyny/vim-gitbranch'
 
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
+Plug 'chipsenkbeil/distant.nvim'
 
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 
 Plug 'nvim-lua/completion-nvim'
+Plug 'janko/vim-test'
 
 call plug#end()
 
+:lua require('CopilotChat').setup{
+            \ debug = true,
+            \}
 
 source ~/.config/nvim/blueprint/neoformat_config.vim
+source ~/.config/nvim/blueprint/copilot.lua
+
+
 

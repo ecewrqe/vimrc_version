@@ -13,6 +13,7 @@ nnoremap <Leader>S "_S
 nnoremap <Leader>a ggVG
 nnoremap yie ggVGy
 nnoremap die ggVGd
+nnoremap cie ggVGc
 nnoremap <Leader>die ggVG"_d
 " nnoremap <C-h> :bp<CR>
 " nnoremap <C-l> :bn<CR>
@@ -59,23 +60,23 @@ cnoremap <Esc>b <S-Left>
 cnoremap <Esc>f <S-Right>
 cnoremap <C-D> <Del>
 
-nnoremap <C-K><C-,> :e $MYVIMRC<CR>
 nnoremap <C-K><C-N> :set hlsearch!<CR>
 
-" nerd Tree focus
-nnoremap <Leader>t :NERDTreeToggle<CR>
-nnoremap <Leader>f :NERDTreeFind<CR>
 
 " puremourning/vimspector
+let g:vimspector_enable_mappings = 'HUMAN'
+let g:vimspector_install_gadgets = { 'node': 'vscode-node-debug2', 'python': 'vscode-python' }
 nnoremap <leader>da :call vimspector#Launch()<CR>
 nnoremap <leader>dx :call vimspector#Reset()<CR>
-" nnoremap <S-k> :call vimspector#StepOut()<CR>
-" nnoremap <S-l> :call vimspector#StepInto()<CR>
-" nnoremap <S-j> :call vimspector#StepOver()<CR>
+nnoremap <F9> :call vimspector#StepOut()<CR>
+nnoremap <F10> :call vimspector#StepInto()<CR>
+nnoremap <F8> :call vimspector#StepOver()<CR>
 nnoremap <leader>d_ :call vimspector#Restart()<CR>
 nnoremap <leader>dn :call vimspector#Continue()<CR>
 nnoremap <leader>drc :call vimspector#ToggleBreakpoint()<CR>
 nnoremap <leader>dh :call vimspector#ToggleConditionalBreakpoint()<CR>
+
+" VimspectorInstall --all --force-all
 
 " szw/vim-maximizer
 nnoremap <leader>m :MaximizerToggle!<CR>
@@ -105,4 +106,45 @@ nnoremap <leader>gg :G<cr>
 
 " autocmd VimEnter * NERDTree
 
+nnoremap  <Leader>ee :lua CopilotChatBuffer()<CR>
 
+
+" nerd Tree focus
+nnoremap <Leader>n :NERDTreeFocus<CR>
+nnoremap <Leader>t :NERDTreeToggle<CR>
+nnoremap <Leader>f :NERDTreeFind<CR>
+let NERDTreeIgnore = ["package-lock.json", "node_modules", "\.exe$", "\.out$"]
+
+" autocmd VimEnter * NERDTree | wincmd p
+
+function s:nerdtree_load()
+    if argc() == 0
+        NERDTree
+        wincmd p
+    elseif argc() == 1 && isdirectory(argv()[0])
+        execute 'NERDTree' argv()[0]
+        wincmd p
+        enew
+        execute 'cd '.argv()[0]
+    endif
+endfunction
+
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * call s:nerdtree_load()
+
+
+
+" janko/vim-test
+nnoremap <silent> tt :TestNearest<CR>
+nnoremap <silent> tf :TestFile<CR>
+nnoremap <silent> ts :TestSuite<CR>
+nnoremap <silent> t_ :TestLast<CR>
+
+let test#strategy = "neovim"
+let test#neovim#term_position = "vertical"
+
+
+" vimspector
+let g:vimspector_enable_mappings = 'HUMAN'
+nmap <Leader>di <Plug>VimspectorBalloonEval
+xmap <Leader>di <Plug>VimspectorBalloonEval

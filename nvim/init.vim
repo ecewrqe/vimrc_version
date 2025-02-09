@@ -19,6 +19,10 @@ let &t_SI = "\e[5 q" "SI = INSERT mode
 let &t_SR = "\e[4 q" "SR = REPLACE mode
 let &t_EI = "\e[1 q" "EI = NORMAL mode
 
+" set enc=utf-8
+set guifont=Powerline_Consolas:h11
+"set renderoptions=type:directx,gamma:1.5,contrast:0.5,geom:1,renmode:5,taamode:1,level:0.5
+
 if has("win32")
     exec "source "..stdpath('config').."\\blueprint\\plugs.vim"
     exec "source "..stdpath('config').."\\blueprint\\colorscheme.vim"
@@ -34,6 +38,7 @@ else
     source ~/.config/nvim/blueprint/keybind.vim
     source ~/.config/nvim/blueprint/options.vim
     source ~/.config/nvim/blueprint/lsp_config.vim
+    source ~/.config/nvim/blueprint/temp.vim
 endif
 
 let lsp_log_verbose=1
@@ -58,37 +63,14 @@ endif
 " vim plugin-------------------------------
 
 
-let g:ycm_clangd_binary_path = trim(system('brew --prefix llvm')).'/bin/clangd'
 
 " nmap y <Plug>(highlightedyank)
 " xmap y <Plug>(highlightedyank)
 " omap y <Plug>(highlightedyank)
 " let g:highlightedyank_highlight_duration = 1000
-function! s:on_lsp_buffer_enabled() abort
-    if &buftype ==# 'nofile' || &filetype =~# '^\(quickrun\)' || getcmdwintype() ==# ':'
-        return
-    endif
-    setlocal omnifunc=lsp#complete
-
-    nmap <buffer> gd <plug>(lsp-definition)
-    nmap <buffer> <f2> <plug>(lsp-rename)
-    nmap <buffer> <c-k> <plug>(lsp-hover)
-endfunction
-
-augroup vimcr_lsp_install
-    autocmd!
-    autocmd User lsp_buffer_enabled call s:on_lsp_buffer_enabled()
-augroup END
 
 
 " go debug
 
-" nerd Tree focus
-nnoremap <Leader>n :NERDTreeFocus<CR>
-nnoremap <Leader>t :NERDTreeToggle<CR>
-nnoremap <Leader>f :NERDTreeFind<CR>
 " STATUS LINE ------------:----------------
 
-let g:vimspector_enable_mappings = 'HUMAN'
-nmap <Leader>di <Plug>VimspectorBalloonEval
-xmap <Leader>di <Plug>VimspectorBalloonEval
