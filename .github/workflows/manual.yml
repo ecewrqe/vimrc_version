@@ -5,10 +5,10 @@ on:
       greeting:
         description: 'Greeting to use'
         required: true
-        default: 'Hello'
+        default: Hello
         type: string
 jobs:
   run:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "${{ github.event.inputs.greetings }} world"
+      - run: echo "${{ inputs.greetings }} world"
