@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
     inputs:
       greeting:
-        description: 'Greeting to use'
+        description: Greeting to use
         required: true
         default: Hello
         type: string
