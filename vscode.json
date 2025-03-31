@@ -16,7 +16,8 @@ Perl(LSP)/Perl Navigator/Perl Debug Adapter
 {
     "workbench.colorTheme": "Default High Contrast",
     "files.autoSave": "onWindowChange",
-    "editor.tabSize": 2,
+    "editor.fontFamily": "'MS Gothic', Consolas",
+    "editor.tabSize": 4,
     "editor.fontSize": 20,
     "editor.comments.insertSpace": true,
     "editor.detectIndentation": true,
@@ -51,9 +52,48 @@ Perl(LSP)/Perl Navigator/Perl Debug Adapter
           "\\"
         ]
       },
+      {
+        "before": [
+          "<C-b>",
+        ],
+        "after": [
+          "<Left>"
+        ]
+      },
+      {
+        "before": [
+          "<C-p>"
+        ],
+        "after": [
+          "<Up>"
+        ]
+      },
+      {
+        "before": [
+          "<C-n>"
+        ],
+        "after": [
+          "<Down>"
+        ]
+      },
+      {
+        "before": [
+          "<C-f>"
+        ],
+        "after": [
+          "<Right>"
+        ]
+      },
+      {
+        "before": [
+          "<C-e>"
+        ],
+        "after": [
+          "<End>"
+        ]
+      }
     ],
     "vim.normalModeKeyBindingsNonRecursive": [
-        // di, ['aa', 'bb',]
       {
         "before": [
           "d", "i", ","
@@ -570,5 +610,40 @@ Perl(LSP)/Perl Navigator/Perl Debug Adapter
     "editor.stickyScroll.enabled": false,
     "terminal.integrated.fontSize": 15,
     "terminal.integrated.sendKeybindingsToShell": true,
-    "grunt.autoDetect": "on"
+    "grunt.autoDetect": "on",
+    "editor.minimap.enabled": false,
+    "go.toolsManagement.autoUpdate": true,
+    "sqltools.connections": [
+      {
+        "mssqlOptions": {
+          "appName": "SQLTools",
+          "useUTC": true,
+          "encrypt": true
+        },
+        "previewLimit": 50,
+        "server": "localhost",
+        "port": 1433,
+        "driver": "MSSQL",
+        "name": "10.211.55.2",
+        "database": "master",
+        "username": "sa"
+      },
+      {
+        "mysqlOptions": {
+          "authProtocol": "default",
+          "enableSsl": "Disabled"
+        },
+        "previewLimit": 50,
+        "server": "localhost",
+        "port": 3306,
+        "driver": "MySQL",
+        "name": "localhost",
+        "username": "root",
+        "database": "appdb"
+      }
+    ],
+    "sqldeveloper.sqlHistory.historyLimit": 500,
+    "sqldeveloper.telemetry.enabled": true,
+    "database-client.autoSync": true
 }
+

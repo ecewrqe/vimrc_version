@@ -1,3 +1,4 @@
+
 // Place your key bindings in this file to override the default
 [
     {
@@ -18,16 +19,13 @@
         "command": "workbench.action.findInFiles"
     },
     {
-        "key": "ctrl+shift+4",
-        "command": "workbench.view.scm"
-    },
-    {
         "key": "ctrl+shift+5",
         "command": "workbench.view.extensions"
     },
     {
         "key": "ctrl+o",
-        "command": "workbench.action.files.openFile"
+        "command": "workbench.action.files.openFile",
+        "when": "!editorTextFocus"
     },
     {
         "key": "ctrl+o",
@@ -54,13 +52,48 @@
         "when": "!accessibilityHelpIsShown && !accessibleViewIsShown"
     },
     {
+        "key": "ctrl+y",
+        "command": "undo",
+        "when": "editorTextFocus && !vim.active"
+    },
+    {
         "key": "ctrl+shift+u",
         "command": "workbench.action.output.toggleOutput",
         "when": "workbench.panel.output.active"
     },
     {
+        "key": "alt+b",
+        "command": "workbench.action.terminal.sendSequence",
+        "args": { "text": "\u001bb" },
+        "when": "terminalFocus"
+    },
+    {
+        "key": "alt+f",
+        "command": "workbench.action.terminal.sendSequence",
+        "args": { "text": "\u001bf" },
+        "when": "terminalFocus"
+    },
+    {
+        "key": "alt+w",
+        "command": "workbench.action.terminal.sendSequence",
+        "args": { "text": "\u0017" },
+        "when": "terminalFocus"
+    },
+    {
+        "key": "alt+k",
+        "command": "workbench.action.terminal.sendSequence",
+        "args": { "text": "\u001B" },
+        "when": "terminalFocus"
+    },
+    {
+        "key": "ctrl+p",
+        "command": "extension.vim_ctrl+p",
+        "when": "editorTextFocus && vim.active && vim.use<C-p> && !inDebugRepl"
+    },
+    {
         "key": "ctrl+e",
-        "command": "workbench.action.quickOpen"
+        "command": "workbench.action.quickOpen",
+        "when": "!editorTextFocus"
     },
     {
         "key": "ctrl+e",
@@ -94,8 +127,19 @@
         "command": "workbench.action.closeOtherEditors"
     },
     {
+        "key": "ctrl+shift+r",
+        "command": "redo",
+        "when": "editorTextFocus && !vim.active"
+    },
+    {
         "key": "ctrl+k ctrl+k",
-        "command": "workbench.action.openGlobalKeybindingsFile"
+        "command": "workbench.action.openGlobalKeybindingsFile",
+        "when": "(!editorTextFocus && !terminal.active) || vim.active"
+    },
+    {
+        "key": "ctrl+k ctrl+k",
+        "command": "editor.action.deleteLines",
+        "when": "editorTextFocus && !vim.active"
     },
     {
         "key": "ctrl+k ctrl+oem_comma",
@@ -112,7 +156,7 @@
         "when": "!terminalFocus"
     },
     {
-        "key": "ctrl+w c",
+        "key": "ctrl+x c",
         "command": "workbench.action.closeActiveEditor",
         "when": "!terminalFocus"
     },
@@ -154,12 +198,13 @@
     },
     {
         "key": "ctrl+b",
-        "command": "workbench.action.toggleSidebarVisibility"
-    },
-    {
-        "key": "ctrl+b",
         "command": "extension.vim_ctrl+b",
         "when": "editorTextFocus && vim.active && vim.use<C-b> && !inDebugRepl"
+    },
+    {
+        "key": "ctrl+u",
+        "command": "workbench.action.terminal.new",
+        "when": "terminal.active"
     },
     {
         "key": "ctrl+shift+b",
@@ -265,5 +310,23 @@
     {
         "key": "ctrl+x ctrl+d",
         "command": "deleteFile"
+    },
+    {
+        "key": "ctrl+enter",
+        "command": "sqltools.executeCurrentQuery",
+        "when": "editorTextFocus && editorLangId == 'sql'"
+    },
+    {
+        "key": "ctrl+x 1",
+        "command": "workbench.action.closeEditorsInOtherGroups"
+    },
+    {
+        "key": "ctrl+shift+i",
+        "command": "toggleVim"
     }
 ]
+
+
+
+
+
