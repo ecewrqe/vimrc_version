@@ -1,4 +1,3 @@
-
 [
     {
         "key": "ctrl+shift+2",
@@ -153,6 +152,44 @@
         "key": "ctrl+w s",
         "command": "workbench.action.splitEditorDown",
         "when": "!terminalFocus"
+    },
+    {
+        "key": "ctrl+x 2",
+        "command": "workbench.action.splitEditorDown",
+        "when": "!terminalfocus"
+    },
+    {
+        "key": "ctrl+x 3",
+        "command": "workbench.action.splitEditor",
+        "when": "!terminalfocus"
+    },
+    {
+        "key": "ctrl+x 0",
+        "command": "workbench.action.closeEditorsInGroup",
+    },
+    {
+        "key": "ctrl+x 1",
+        "command": "workbench.action.closeEditorsInOtherGroups",
+    },
+    {
+        "key": "ctrl+x t 1",
+        "command": "workbench.action.closeOtherEditors"
+    },
+    {
+        "key": "ctrl+x t 0",
+        "command": "workbench.action.closeActiveEditor"
+    },
+    {
+        "key": "ctrl+x 5 2",
+        "command": "workbench.action.newWindow"
+    },
+    {
+        "key": "ctrl+x 5 0",
+        "command": "workbench.action.closeWindow"
+    },
+    {
+        "key": "ctrl+x 5 f",
+        "command": "workbench.action.moveEditorToNewWindow"
     },
     {
         "key": "ctrl+x c",
@@ -316,10 +353,6 @@
         "when": "editorTextFocus && editorLangId == 'sql'"
     },
     {
-        "key": "ctrl+x 1",
-        "command": "workbench.action.closeEditorsInOtherGroups"
-    },
-    {
         "key": "ctrl+shift+i",
         "command": "toggleVim"
     },
@@ -367,6 +400,102 @@
     },
     {
         "key": "ctrl+k ctrl+m",
-        "command": "workbench.action.toggleMaximizeEditorGroup",
+        "command": "workbench.action.toggleMaximizeEditorGroup"
+    },
+    {
+        "key": "ctrl+k m",
+        "command": "workbench.action.editor.changeLanguageMode"
+    },
+    // Emacs-style navigation when Vim is NOT active (regular VS Code editing)
+    {
+        "key": "ctrl+a",
+        "command": "cursorHome",
+        "when": "editorTextFocus && (vim.mode == 'Insert' || !vim.active)"
+    },
+    {
+        "key": "ctrl+e",
+        "command": "cursorEnd",
+        "when": "editorTextFocus && (vim.mode == 'Insert' || !vim.active)"
+    },
+    {
+        "key": "ctrl+f",
+        "command": "cursorRight",
+        "when": "editorTextFocus && (vim.mode == 'Insert' || !vim.active)"
+    },
+    {
+        "key": "ctrl+b",
+        "command": "cursorLeft",
+        "when": "editorTextFocus && (vim.mode == 'Insert' || !vim.active)"
+    },
+    {
+        "key": "ctrl+n",
+        "command": "cursorDown",
+        "when": "editorTextFocus && (vim.mode == 'Insert' || !vim.active)"
+    },
+    {
+        "key": "ctrl+p",
+        "command": "cursorUp",
+        "when": "editorTextFocus && (vim.mode == 'Insert' || !vim.active)"
+    },
+    {
+        "key": "alt+f",
+        "command": "cursorWordRight",
+        "when": "editorTextFocus && (vim.mode == 'Insert' || !vim.active)"
+    },
+    {
+        "key": "alt+b",
+        "command": "cursorWordLeft",
+        "when": "editorTextFocus && (vim.mode == 'Insert' || !vim.active)"
+    },
+    {
+        "key": "ctrl+d",
+        "command": "deleteRight",
+        "when": "editorTextFocus && (vim.mode == 'Insert' || !vim.active)"
+    },
+    {
+        "key": "ctrl+h",
+        "command": "deleteLeft",
+        "when": "editorTextFocus && (vim.mode == 'Insert' || !vim.active)"
+    },
+    {
+        "key": "ctrl+k",
+        "command": "deleteAllRight",
+        "when": "editorTextFocus && (vim.mode == 'Insert' || !vim.active)"
+    },
+    {
+        "key": "ctrl+u",
+        "command": "deleteAllLeft",
+        "when": "editorTextFocus && (vim.mode == 'Insert' || !vim.active)"
+    },
+    {
+        "key": "alt+d",
+        "command": "deleteWordRight",
+        "when": "editorTextFocus && (vim.mode == 'Insert' || !vim.active)"
+    },
+    {
+        "key": "ctrl+w",
+        "command": "deleteWordLeft",
+        "when": "editorTextFocus && (vim.mode == 'Insert' || !vim.active)"
+    },
+    {
+        "key": "ctrl+t",
+        "command": "editor.action.transposeLetters",
+        "when": "editorTextFocus && (vim.mode == 'Insert' || !vim.active)"
+    },
+    // Emacs-style navigation that works in BOTH Vim insert mode AND when Vim is not active
+    {
+        "key": "ctrl+s",
+        "command": "actions.find",
+        "when": "editorTextFocus && (vim.mode == 'Insert' || !vim.active)"
+    },
+    {
+        "key": "ctrl+v",
+        "command": "cursorPageDown",
+        "when": "editorTextFocus && (vim.mode == 'Insert' || !vim.active)"
+    },
+    {
+        "key": "alt+v",
+        "command": "cursorPageUp",
+        "when": "editorTextFocus && (vim.mode == 'Insert' || !vim.active)"
     }
 ]

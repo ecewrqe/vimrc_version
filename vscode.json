@@ -30,12 +30,7 @@
   "vim.highlightedyank.duration": 150,
   "vim.highlightedyank.color": "rgba(0, 240, 170, 0.5)",
   "vim.insertModeKeyBindings": [
-    { "before": [ "¥" ], "after": [ "\\" ] },
-    { "before": [ "<C-b>", ], "after": [ "<Left>" ] },
-    { "before": [ "<C-p>" ], "after": [ "<Up>" ] },
-    { "before": [ "<C-n>" ], "after": [ "<Down>" ] },
-    { "before": [ "<C-f>" ], "after": [ "<Right>" ] },
-    { "before": [ "<C-e>" ], "after": [ "<End>" ] }
+    { "before": [ "¥" ], "after": [ "\\" ] }
   ],
   "vim.normalModeKeyBindingsNonRecursive": [
     { "before": [ "d", "i", "," ], "after": [ "f", ",", "l", "d", "2", "T", "," ] },
@@ -266,5 +261,6 @@
   },
   "vs-kubernetes": {
     "vscode-kubernetes.minikube-path-mac": "/Users/euewrqe/.vs-kubernetes/tools/minikube/darwin-arm64/minikube"
-  }
+  },
+  "github.copilot.nextEditSuggestions.enabled": true
 }
