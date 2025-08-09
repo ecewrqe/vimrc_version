@@ -7,6 +7,9 @@ on:
         required: true
         default: hello
         type: string
+  push:
+    branches:
+      - master
 
 jobs:
   manual:
