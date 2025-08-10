@@ -1,17 +1,17 @@
-// login, logout
+# login, logout
 cat mypassword.txt|sudo docker login --username euewrqe --password-stdin
 sudo docker logout
 
-// get images from private repository
+# get images from private repository
 sudo docker pull euewrqe/templates:latest
 sudo docker pull euewrqe/templates:latest
 sudo docker pull ubuntu:latest
 sudo docker pull centos:centos7
 
-// build a dockerfile, -t title, -f filename
+# build a dockerfile, -t title, -f filename
 sudo docker build -t nginx:latest .
 
-// run a container and into bash
+# run a container and into bash
 sudo docker run --name nginx2 -it -d nginx:latest /bin/bash
 sudo docker run --name nginx -it -dp 0.0.0.0:8080:80 nginx:latest
 
@@ -34,7 +34,7 @@ sudo docker image ls -a
 
 sudo docker logs --details nginx
 
-// push to repository
+# push to repository
 sudo docker commit nginx euewrqe/templates:laravel
 sudo docker tag nginx:latest euewrqe/templates:latest
 sudo docker push euewrqe/templates:laravel

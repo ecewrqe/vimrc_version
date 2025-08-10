@@ -1,3 +1,4 @@
+# change the powershell action as emacs mode
 [Console]::InputEncoding=[Console]::OutputEncoding=[System.Text.UTF8Encoding]::new()
 $PSDefaultParameterValues['Out-File:Encoding']='utf8'
 
