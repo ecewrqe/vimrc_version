@@ -1,0 +1,30 @@
+#!/bin/zsh
+# zshenv > zprofile > zshrc > zlogin
+autoload -U colors && colors
+# export PS1="%{$fg[red]%}%n%{$reset_color%}@%{$fg[blue]%}%m %{$fg[yellow]%}%~ %{$reset_color%}%% "
+export PS1="%{$fg[red]%}%~ $ %{$reset_color%}"
+# %d Current directory
+# %? Show the return code from the previous executed command
+# %M Full hostname
+# %n Username
+# %D Current date
+# %T Current time in 24-hours
+# %F{color} foreground color: black, red, green, yellow, blue, magenta, cyan, white
+# %K{color} background color
+export PATH="/opt/local/bin:/opt/local/sbin:$PATH:/Applications/Visual\ Studio\ Code.app/Contents/MacOS/:/opt/homebrew/opt/mysql@5.7/bin"
+export MANPATH="/opt/local/share/man:$MANPATH"
+alias python='python3'
+alias pip="pip3"
+alias vim="nvim"
+alias ll="ls -l"
+alias ipython="python -m IPython"
+alias ls="ls --color=auto"
+alias grep="grep --color=auto"
+alias fgrep="fgrep --color=auto"
+alias egrep="egrep --color=auto"
+eval "$(rbenv init -)"
+export JAVA_HOME=`/usr/libexec/java_home -v 21`
+export PATH="~/.npm-global/bin:$PATH"
+
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
