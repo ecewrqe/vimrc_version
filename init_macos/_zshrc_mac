@@ -11,7 +11,11 @@ export PS1="%{$fg[red]%}%~ $ %{$reset_color%}"
 # %T Current time in 24-hours
 # %F{color} foreground color: black, red, green, yellow, blue, magenta, cyan, white
 # %K{color} background color
-export PATH="/opt/local/bin:/opt/local/sbin:$PATH:/Applications/Visual\ Studio\ Code.app/Contents/MacOS/:/opt/homebrew/opt/mysql@5.7/bin"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
 export MANPATH="/opt/local/share/man:$MANPATH"
 alias python='python3'
 alias pip="pip3"

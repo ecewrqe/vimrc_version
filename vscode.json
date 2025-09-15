@@ -262,5 +262,6 @@
   "vs-kubernetes": {
     "vscode-kubernetes.minikube-path-mac": "/Users/euewrqe/.vs-kubernetes/tools/minikube/darwin-arm64/minikube"
   },
-  "github.copilot.nextEditSuggestions.enabled": true
+  "github.copilot.nextEditSuggestions.enabled": true,
+  "workbench.preferredHighContrastColorTheme": "GitHub Dark High Contrast"
 }
