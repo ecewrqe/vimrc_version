@@ -1,7 +1,9 @@
-#!/bin/bash
+#!/bin/zsh
 
 # git clone https://github.com/ecewrqe/vimrc_version
 # cd vimrc_version || exit 1
+
+mkdir -p ~/Projects
 
 # Copy when selected and paste with right mouse button on iterm2
 # General > Selection > "Copy to pasteboard on selection"
@@ -84,6 +86,22 @@ cat ~/.ssh/id_rsa.pub
 # prompt
 read -r -p "Copy the above public key to GitHub/GitLab/Bitbucket and press Enter to continue..."
 
-brew install gh -y
+brew install gh neovim rbenv ruby-build pyenv pyenv-virtualenv ipython
 
 gh auth login
+
+# neovim setup
+
+mkdir -p ~/.config/nvim
+cp -rf ~/Projects/vimrc_version/nvim/* ~/.config/nvim/
+
+brew install colima docker docker-compose
+colima start
+docker context use colima
+docker run hello-world
+
+# colima start --arch x86_64 --vm-type=vz --vz-rosetta
+# docker run --platform linux/amd64 hello-world
+
+# docker login -u <username> -p <personal_access_token>
+# colima start --kubernetes
