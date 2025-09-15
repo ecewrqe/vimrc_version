@@ -187,31 +187,13 @@
   "go.toolsManagement.autoUpdate": true,
   "sqltools.connections": [
     {
-      "mssqlOptions": {
-        "appName": "SQLTools",
-        "useUTC": true,
-        "encrypt": true
-      },
-      "previewLimit": 50,
-      "server": "localhost",
-      "port": 1433,
-      "driver": "MSSQL",
-      "name": "10.211.55.2",
-      "database": "master",
-      "username": "sa"
-    },
-    {
-      "mysqlOptions": {
-        "authProtocol": "default",
-        "enableSsl": "Disabled"
-      },
-      "previewLimit": 50,
-      "server": "localhost",
-      "port": 3306,
-      "driver": "MySQL",
-      "name": "localhost",
-      "username": "root",
-      "database": "appdb"
+      "name": "Local Postgres",
+      "driver": "PostgreSQL",
+      "server": "postgres-16",
+      "port": 5432,
+      "database": "mydatabase",
+      "username": "myuser",
+      "password": "mypassword"
     }
   ],
   "[ruby]": {
