@@ -11,6 +11,7 @@ code --install-extension eamodio.gitlens
 
 code --install-extension ms-azuretools.vscode-containers
 code --install-extension ms-azuretools.vscode-docker
+code --install-extension ms-vscode-remote.remote-containers
 
 code --install-extension mechatroner.rainbow-csv
 code --install-extension grapecity.gc-excelviewer

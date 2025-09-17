@@ -7,7 +7,7 @@ RUN /usr/sbin/useradd euewrqe && \
     echo "euewrqe ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
 
 RUN microdnf update -y && \
-    microdnf install -y epel-release yum-utils wget sudo which tart zip unzip gzip bind-utils iputils pip && \
+    microdnf install -y epel-release yum-utils wget sudo which tar zip unzip gzip bind-utils iputils pip git jq findutils telnet && \
     rm -fr /var/cache/yum/* && \
     microdnf clean all
 

@@ -43,12 +43,27 @@ services:
         source: postgres-volume
         target: /var/lib/postgresql/data
 
+  mongo:
+    container_name: mongodb
+    image: mongo:7.0
+    ports:
+      - "27017:27017"
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: myuser
+      MONGO_INITDB_ROOT_PASSWORD: mypassword
+    networks:
+      - local-dev-network
+    volumes:
+      - "mongodb-volume:/data/db"
+
 volumes:
   user-volume:
     driver: local
   localstack-volume:
     driver: local
   postgres-volume:
+    driver: local
+  mongodb-volume:
     driver: local
 
 networks:

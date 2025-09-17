@@ -105,3 +105,18 @@ docker run hello-world
 
 # docker login -u <username> -p <personal_access_token>
 # colima start --kubernetes
+
+# pyenv
+eval "$(pyenv init --path)"
+eval "$(pyenv init -)"
+
+brew install xz zlib
+
+export LDFLAGS="-L$(brew --prefix xz)/lib -L$(brew --prefix zlib)/lib"
+export CPPFLAGS="-I$(brew --prefix xz)/include -I$(brew --prefix zlib)/include"
+export PKG_CONFIG_PATH="$(brew --prefix xz)/lib/pkgconfig:$(brew --prefix zlib)/lib/pkgconfig"
+
+pyenv install 3.12.6
+pyenv global 3.12.6
+
+pip install --upgrade pip
