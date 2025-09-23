@@ -1,2 +1,0 @@
-if executable('golsp')
-endif
