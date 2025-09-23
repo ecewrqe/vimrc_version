@@ -16,5 +16,5 @@ if [ -f ~/.vimrc ]; then
 fi
 
 if [ -f ~/.tmux.conf ]; then
-    cp -f ~/.tmux.conf ~/Projects/vimrc_version/.tmux.conf
+    cp -f ~/.tmux.conf ~/Projects/vimrc_version/tmux.conf
 fi
