@@ -107,12 +107,11 @@ nnoremap <leader>gg :G<cr>
 " autocmd VimEnter * NERDTree
 
 nnoremap  <Leader>ee :lua CopilotChatBuffer()<CR>
+nnoremap <Leader>cI :CopilotChat<CR>
 
 
 " nerd Tree focus
-nnoremap <Leader>n :NERDTreeFocus<CR>
 nnoremap <Leader>t :NERDTreeToggle<CR>
-nnoremap <Leader>f :NERDTreeFind<CR>
 let NERDTreeIgnore = ["package-lock.json", "node_modules", "\.exe$", "\.out$"]
 
 " autocmd VimEnter * NERDTree | wincmd p

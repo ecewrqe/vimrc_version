@@ -2,6 +2,7 @@ filetype on
 syntax enable
 filetype plugin indent on
 
+set t_Co=256
 set number
 set modifiable
 set encoding=UTF-8

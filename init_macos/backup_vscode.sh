@@ -7,7 +7,8 @@ if [ -f ~/.config/nvim/init.vim ]; then
 fi
 
 if [ -d ~/.config/nvim/blueprint ]; then
-    cp -fr ~/.config/nvim/blueprint ~/Projects/vimrc_version/nvim/blueprint
+    rm -fr ~/Projects/vimrc_version/nvim/blueprint
+    cp -fr ~/.config/nvim/blueprint ~/Projects/vimrc_version/nvim/
 fi
 
 if [ -f ~/.vimrc ]; then

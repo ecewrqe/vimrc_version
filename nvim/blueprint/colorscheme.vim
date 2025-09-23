@@ -10,7 +10,11 @@
 " Make the background transparent
 " let g:codedark_transparent=1
 " If you have vim-airline, you can also enable the provided theme
+let g:airline_powerline_fonts = 1
 let g:airline_theme = 'codedark'
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#formatter = 'default'
+
 colorscheme codedark
 
 
