@@ -65,6 +65,7 @@ Plug 'airblade/vim-gitgutter'
 
 Plug 'nvim-lua/completion-nvim'
 Plug 'janko/vim-test'
+Plug 'ryanoasis/vim-devicons'
 
 call plug#end()
 
