@@ -1,0 +1,249 @@
+// vscode setting.json(無、水雷屯)
+{
+  "workbench.colorTheme": "GitHub Dark High Contrast",
+  "files.autoSave": "onWindowChange",
+  "editor.fontFamily": "'MS Gothic', Consolas",
+  "editor.tabSize": 4,
+  "editor.fontSize": 20,
+  "editor.comments.insertSpace": true,
+  "editor.detectIndentation": true,
+  "workbench.colorCustomizations": {
+    "diffEditor.insertedTextBackground": "#0b5236f4",
+    "diffEditor.removedTextBackground": "#54141bf6",
+    "diffEditor.modifiedTextBackground": "#0b5236"
+  },
+  "terminal.integrated.scrollback": 20000,
+  "vim.targets.smartQuotes.enable": true,
+  "vim.easymotion": true,
+  "vim.incsearch": true,
+  "vim.hlsearch": true,
+  "vim.searchHighlightColor": "rgba(10, 150, 255, 0.6)",
+  "vim.substitutionColor": "rgba(10, 150, 255, 0.6)",
+  "vim.surround": true,
+  "vim.history": 10000,
+  "vim.showcmd": true,
+  "vim.useSystemClipboard": true,
+  "vim.autoindent": true,
+  "vim.smartcase": true,
+  "vim.wrapscan": true,
+  "vim.highlightedyank.enable": true,
+  "vim.highlightedyank.duration": 150,
+  "vim.highlightedyank.color": "rgba(0, 240, 170, 0.5)",
+  "vim.insertModeKeyBindings": [
+    { "before": [ "¥" ], "after": [ "\\" ] }
+  ],
+  "vim.normalModeKeyBindingsNonRecursive": [
+    { "before": [ "d", "i", "," ], "after": [ "f", ",", "l", "d", "2", "T", "," ] },
+    {
+      "before": [ "y", "s", "i", "w", "<leader>" ],
+      "after": [ "e", "a", "<leader>", "<Escape>", "b", "i", "<leader>", "<Escape>", "l" ]
+    },
+    {
+      "before": [ "y", "s", "i", "w", "%" ],
+      "after": [ "e", "a", "%", "<Escape>", "h", "b", "i", "%", "<Escape>", "l" ]
+    },
+    {
+      "before": [ "y", "s", "i", "W", "%" ],
+      "after": [ "f", "<leader>", "a", "%", "<Escape>", "2", "h", "F", "<leader>", "i", "%", "<Escape>", "l" ]
+    },
+    {
+      "before": [ "y", "s", "i", "w", "$" ],
+      "after": [ "e", "a", "$", "<Escape>", "h", "b", "i", "$", "<Escape>", "l" ]
+    },
+    {
+      "before": [ "y", "s", "i", "W", "$" ],
+      "after": [ "f", "<leader>", "a", "$", "<Escape>", "2", "h", "F", "<leader>", "i", "$", "<Escape>", "l" ]
+    },
+    {
+      "before": [ "y", "s", "i", "w", "#" ],
+      "after": [ "e", "a", "#", "<Escape>", "h", "b", "i", "#", "<Escape>", "l" ]
+    },
+    {
+      "before": [ "y", "s", "i", "W", "#" ],
+      "after": [ "f", "<leader>", "a", "#", "<Escape>", "2", "h", "F", "<leader>", "i", "#", "<Escape>", "l" ]
+    },
+    {
+      "before": [ "y", "s", "i", "w", "*" ],
+      "after": [ "e", "a", "#", "<Escape>", "h", "b", "i", "#", "<Escape>", "l" ]
+    },
+    {
+      "before": [ "y", "s", "i", "W", "*" ],
+      "after": [ "f", "<leader>", "a", "*", "<Escape>", "2", "h", "F", "<leader>", "i", "*", "<Escape>", "l" ]
+    },
+    {
+      "before": [ "y", "s", "i", "w", "'" ],
+      "after": [ "e", "a", "'", "<Escape>", "h", "b", "i", "'", "<Escape>", "l" ]
+    },
+    {
+      "before": [ "y", "s", "i", "W", "'" ],
+      "after": [ "f", "<leader>", "a", "'", "<Escape>", "2", "h", "F", "<leader>", "i", "'", "<Escape>", "l" ]
+    },
+    {
+      "before": [ "y", "s", "i", "w", "\"" ],
+      "after": [ "e", "a", "\"", "<Escape>", "h", "b", "i", "\"", "<Escape>", "l" ]
+    },
+    {
+      "before": [ "y", "s", "i", "W", "\"" ],
+      "after": [ "f", "<leader>", "a", "\"", "<Escape>", "2", "h", "F", "<leader>", "i", "\"", "<Escape>", "l" ]
+    },
+    {
+      "before": [ "d", "s", "<leader>" ],
+      "after": [ "f", "<leader>", "x", "F","<leader>","x" ]
+    },
+    {
+      "before": [ "y", "s", "i", "<", "<leader>" ],
+      "after": [ "f", ">", "i", "<leader>", "<Escape>", "F", "<", "a", "<leader>", "<Escape>", "l" ]
+    },
+    {
+      "before": [ "y", "s", "i", "(", "<leader>" ],
+      "after": [ "f", ")", "i", "<leader>", "<Escape>", "F", "(", "a", "<leader>", "<Escape>", "l" ]
+    },
+    {
+      "before": [ "y", "s", "i", "[", "<leader>" ],
+      "after": [ "f", "]", "i", "<leader>", "<Escape>", "F", "[", "a", "<leader>", "<Escape>", "l" ]
+    },
+    {
+      "before": [ "y", "s", "i", "{", "<leader>" ],
+      "after": [ "f", "}", "i", "<leader>", "<Escape>", "F", "{", "a", "<leader>", "<Escape>", "l" ]
+    },
+    { "before": [ "d", "s", "<" ], "after": [ "f", ">", "x", "F","<","x" ] },
+    { "before": [ "d", "s", "%" ], "after": [ "f", "%", "x", "F","%","x" ] },
+    { "before": [ "U" ], "after": [ "u" ] },
+    { "before": [ "c", "i", "," ], "after": [ "f", ",", "l", "c", "2", "T", "," ] },
+    { "before": [ "y", "i", "," ], "after": [ "f", ",", "l", "y", "2", "T", "," ] },
+    {
+      "before": [ "<leader>", "d", "i", "," ],
+      "after": [ "f", ",", "l", "\"", "_", "d", "2", "T", "," ]
+    },
+    {
+      "before": [ "<leader>", "c", "i", "," ],
+      "after": [ "f", ",", "l", "\"", "_", "c", "2", "T", "," ]
+    },
+    { "before": [ "<leader>", "d" ], "after": [ "\"", "_", "d" ] },
+    { "before":[ "<leader>", "D" ], "after": [ "\"", "_", "D" ] },
+    { "before": [ "<leader>", "c" ], "after": [ "\"", "_", "c" ] },
+    { "before":[ "<leader>", "C" ], "after": [ "\"", "_", "C" ] },
+    { "before": [ "<leader>", "x" ], "after": [ "\"", "_", "x" ] },
+    { "before": [ "<leader>", "s" ], "after": [ "\"", "_", "s" ] },
+    { "before": [ "<leader>", "A" ], "after": [ "g", "g", "V", "G" ] },
+    { "before": [ "<leader>", "a" ], "after": [ "^" ] },
+    { "before": [ "<leader>", "e" ], "after": [ "$" ] },
+    { "before": [ "<leader>", "n" ], "after": [ "b", "i" ] },
+    { "before": [ "<leader>", "N" ], "after": [ "B", "i" ] },
+    { "before": [ "<leader>", "m" ], "after": [ "e", "a" ] },
+    { "before": [ "<leader>", "M" ], "after": [ "E", "a" ] },
+    { "before": [ "y", "i", "e" ], "after": [ "g", "g", "V", "G", "y" ] },
+    { "before": [ "d", "i", "e" ], "after": [ "g", "g", "V", "G", "d" ] },
+    { "before": [ "<leader>", "d", "i", "e" ], "after": [ "g", "g", "V", "G", "\"", "_", "d" ] },
+    { "before": [ "<C-k><C-n>" ], "commands": [ ":nohl" ] },
+    { "before": [ "<leader>", "o" ], "commands": [ ":only" ] },
+    { "before": [ "<tab>", "o" ], "commands": [ ":tabonly" ] },
+  ],
+  "vim.visualModeKeyBindingsNonRecursive": [
+    { "before": [ "<leader>", "d" ], "after": [ "\"", "_", "d" ] },
+    { "before":[ "<leader>", "D" ], "after": [ "\"", "_", "D" ] },
+    { "before": [ "<leader>", "c" ], "after": [ "\"", "_", "c" ] },
+    { "before": [ "<leader>", "C" ], "after": [ "\"", "_", "C" ] },
+    { "before": [ "<leader>", "x" ], "after": [ "\"", "_", "x" ] },
+    { "before": [ "<leader>", "s" ], "after": [ "\"", "_", "s" ] },
+    { "before": [ "<leader>", "a" ], "after": [ "^" ] }, 
+    { "before": [ "<leader>", "e" ], "after": [ "$" ] },
+  ],
+  "vim.handleKeys": {
+    "<C-d>": true,
+    "<C-s>": false,
+    "<C-z>": false
+  },
+  "vim.insertModeKeyBindingsNonRecursive": [],
+  "vim.leader": "<space>",
+  "vim.overrideCopy": true,
+  "editor.suggest.snippetsPreventQuickSuggestions": true,
+  "editor.mouseWheelZoom": true,
+  "editor.wordWrap": "on",
+  "workbench.iconTheme": "material-icon-theme",
+  "files.readonlyFromPermissions": true,
+  "css.lint.unknownAtRules": "ignore",
+  "[javascript]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "editor.autoIndent": "full",
+  "[go]": {
+    "editor.insertSpaces": true,
+    "editor.formatOnSave": false,
+    "editor.defaultFormatter": "golang.go",
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": "never"
+    }
+  },
+  "workbench.preferredDarkColorTheme": "Default High Contrast",
+  "terminal.integrated.rightClickBehavior": "paste",
+  "terminal.integrated.copyOnSelection": true,
+  "editor.insertSpaces": true,
+  "editor.stickyScroll.enabled": false,
+  "terminal.integrated.fontSize": 15,
+  "terminal.integrated.sendKeybindingsToShell": true,
+  "grunt.autoDetect": "on",
+  "editor.minimap.enabled": false,
+  "go.toolsManagement.autoUpdate": true,
+  "sqltools.connections": [
+    {
+      "name": "Local Postgres",
+      "driver": "PostgreSQL",
+      "server": "postgres-16",
+      "port": 5432,
+      "database": "mydatabase",
+      "username": "myuser",
+      "password": "mypassword"
+    }
+  ],
+  "[ruby]": {
+    "editor.defaultFormatter": "misogi.ruby-rubocop"
+  },
+  "rubyLsp.rubyVersionManager": {
+      "type": "rbenv"
+  },
+  "rubyLsp.formatter": "auto",
+  "rubyLsp.customRubyCommand": "PATH=$PATH",
+  "solargraph.commandPath": "/Users/euewrqe/.rbenv/versions/3.3.0/bin",
+  "solargraph.useBundler": true,
+  "solargraph.bundlerPath": "/Users/euewrqe/.rbenv/versions/3.3.0/bin",
+  "[sql]": {
+    "editor.formatOnSave": false
+  },
+  "[dart]": {
+    "editor.formatOnSave": true,
+    "editor.formatOnType": true,
+    "editor.rulers": [80],
+    "editor.selectionHighlight": false,
+    "editor.tabCompletion": "onlySnippets",
+    "editor.wordBasedSuggestions": "off"
+  },
+  "[yaml]": {
+    "editor.tabSize": 2,
+    "editor.insertSpaces": true,
+    "editor.autoIndent": "advanced",
+    "editor.formatOnSave": false
+  },
+  "files.associations": {
+    "*.yaml": "yaml"
+  },
+  "perl.perlCmd": "/Users/euewrqe/.plenv/versions/5.40/bin/perl",
+  "perl.enable": true,
+
+  "perl-toolbox.lint.path": "/User/euewrqe/.plenv/versions/5.40/bin/perlcritic",
+  "[perl]": {
+    "editor.formatOnSave": true
+  },
+  "perltidy.executable": "/User/euewrqe/.plenv/versions/5.40/bin/perltidy",
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "[markdown]": {
+    "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
+  },
+  "vs-kubernetes": {
+    "vscode-kubernetes.minikube-path-mac": "/Users/euewrqe/.vs-kubernetes/tools/minikube/darwin-arm64/minikube"
+  },
+  "github.copilot.nextEditSuggestions.enabled": true,
+  "workbench.preferredHighContrastColorTheme": "GitHub Dark High Contrast"
+}
