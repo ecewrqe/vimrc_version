@@ -1,0 +1,17 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: >
+  CloudFormation Template to create a macOS EC2 instance with necessary configurations.
+
+Resources:
+  MyS3Bucket:
+    Type: 'AWS::S3::Bucket'
+    Properties:
+      BucketName: my-unique-example-bucket-12345
+      Tags:
+        - Key: Environment
+          Value: Development
+
+Outputs:
+  BucketName:
+    Description: The name of the S3 bucket
+    Value: !Ref MyS3Bucket

@@ -1,0 +1,127 @@
+// vscode setting.json(無、水雷屯)
+{
+  "files.autoSave": "onWindowChange",
+  "editor.fontFamily": "'MS Gothic', Consolas",
+  "editor.tabSize": 4,
+  "editor.fontSize": 20,
+  "editor.comments.insertSpace": true,
+  "editor.detectIndentation": true,
+  "workbench.colorCustomizations": {
+    "diffEditor.insertedTextBackground": "#0b5236f4",
+    "diffEditor.removedTextBackground": "#54141bf6",
+    "diffEditor.modifiedTextBackground": "#0b5236"
+  },
+  "terminal.integrated.scrollback": 20000,
+  "vim.targets.smartQuotes.enable": true,
+  "vim.easymotion": true,
+  "vim.incsearch": true,
+  "vim.hlsearch": true,
+  "vim.searchHighlightColor": "rgba(10, 150, 255, 0.6)",
+  "vim.substitutionColor": "rgba(10, 150, 255, 0.6)",
+  "vim.surround": true,
+  "vim.history": 10000,
+  "vim.showcmd": true,
+  "vim.useSystemClipboard": true,
+  "vim.autoindent": true,
+  "vim.smartcase": true,
+  "vim.wrapscan": true,
+  "vim.highlightedyank.enable": true,
+  "vim.highlightedyank.duration": 150,
+  "vim.highlightedyank.color": "rgba(0, 240, 170, 0.5)",
+  "vim.insertModeKeyBindings": [
+    { "before": [ "¥" ], "after": [ "\\" ] }
+  ],
+  "vim.normalModeKeyBindingsNonRecursive": [
+    // array
+    { "before": [ "d", "i", "," ], "after": [ "f", ",", "l", "d", "2", "T", "," ] },
+
+    // perl regex
+    { "before": [ "d", "i", "/" ], "after": [ "T", "/", "d", "t", "/" ] },
+    { "before": [ "c", "i", "/" ], "after": [ "T", "/", "c", "t", "/" ] },
+    { "before": [ "y", "i", "/" ], "after": [ "T", "/", "y", "t", "/" ] },
+
+    { "before": [ "<leader>", "d" ], "after": [ "\"", "_", "d" ] },
+    { "before":[ "<leader>", "D" ], "after": [ "\"", "_", "D" ] },
+    { "before": [ "<leader>", "c" ], "after": [ "\"", "_", "c" ] },
+    { "before":[ "<leader>", "C" ], "after": [ "\"", "_", "C" ] },
+    { "before": [ "<leader>", "x" ], "after": [ "\"", "_", "x" ] },
+    { "before": [ "<leader>", "s" ], "after": [ "\"", "_", "s" ] },
+    { "before": [ "<leader>", "A" ], "after": [ "g", "g", "V", "G" ] },
+    { "before": [ "<leader>", "a" ], "after": [ "^" ] },
+    { "before": [ "<leader>", "e" ], "after": [ "$" ] },
+    { "before": [ "<leader>", "n" ], "after": [ "b", "i" ] },
+    { "before": [ "<leader>", "N" ], "after": [ "B", "i" ] },
+    { "before": [ "<leader>", "m" ], "after": [ "e", "a" ] },
+    { "before": [ "<leader>", "M" ], "after": [ "E", "a" ] },
+    { "before": [ "y", "i", "e" ], "after": [ "g", "g", "V", "G", "y" ] },
+    { "before": [ "d", "i", "e" ], "after": [ "g", "g", "V", "G", "d" ] },
+    { "before": [ "<leader>", "d", "i", "e" ], "after": [ "g", "g", "V", "G", "\"", "_", "d" ] },
+    { "before": [ "<C-k><C-n>" ], "commands": [ ":nohl" ] },
+    { "before": [ "<leader>", "o" ], "commands": [ ":only" ] },
+    { "before": [ "<tab>", "o" ], "commands": [ ":tabonly" ] },
+  ],
+  "vim.visualModeKeyBindingsNonRecursive": [
+    { "before": [ "<leader>", "d" ], "after": [ "\"", "_", "d" ] },
+    { "before":[ "<leader>", "D" ], "after": [ "\"", "_", "D" ] },
+    { "before": [ "<leader>", "c" ], "after": [ "\"", "_", "c" ] },
+    { "before": [ "<leader>", "C" ], "after": [ "\"", "_", "C" ] },
+    { "before": [ "<leader>", "x" ], "after": [ "\"", "_", "x" ] },
+    { "before": [ "<leader>", "s" ], "after": [ "\"", "_", "s" ] },
+    { "before": [ "<leader>", "a" ], "after": [ "^" ] },
+    { "before": [ "<leader>", "e" ], "after": [ "$" ] },
+  ],
+  "vim.handleKeys": {
+    "<C-d>": true,
+    "<C-s>": false,
+    "<C-z>": false
+  },
+  "vim.insertModeKeyBindingsNonRecursive": [],
+  "vim.leader": "<space>",
+  "vim.overrideCopy": true,
+  "editor.suggest.snippetsPreventQuickSuggestions": true,
+  "editor.mouseWheelZoom": true,
+  "editor.wordWrap": "on",
+  "workbench.iconTheme": "material-icon-theme",
+  "files.readonlyFromPermissions": true,
+  "css.lint.unknownAtRules": "ignore",
+  "[javascript]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "editor.autoIndent": "full",
+  "workbench.preferredDarkColorTheme": "Default High Contrast",
+  "terminal.integrated.rightClickBehavior": "paste",
+  "terminal.integrated.copyOnSelection": true,
+  "editor.insertSpaces": true,
+  "editor.stickyScroll.enabled": false,
+  "terminal.integrated.fontSize": 15,
+  "terminal.integrated.sendKeybindingsToShell": true,
+  "grunt.autoDetect": "on",
+  "editor.minimap.enabled": false,
+  "sqltools.connections": [
+    {
+      "name": "Local Postgres",
+      "driver": "PostgreSQL",
+      "server": "localhost",
+      "port": 5432,
+      "database": "mydatabase",
+      "username": "myuser",
+      "password": "mypassword"
+    }
+  ],
+  "[yaml]": {
+    "editor.tabSize": 2,
+    "editor.insertSpaces": true,
+    "editor.autoIndent": "advanced",
+    "editor.formatOnSave": false
+  },
+  "files.associations": {
+    "*.yaml": "yaml"
+  },
+
+  "workbench.preferredHighContrastColorTheme": "GitHub Dark High Contrast",
+  "workbench.preferredHighContrastLightColorTheme": "GitHub Dark High Contrast",
+  "terminal.external.osxExec": "iTerm.app",
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  }
+}

@@ -1,0 +1,18 @@
+(auto-fill-mode)
+(custom-set-variables
+ '(tool-bar-mode nil nil (tool-bar))
+ '(menu-bar-mode nil nil (menu-bar))
+ '(cua-mode t nil (cua-base)))
+(global-display-line-numbers-mode)
+
+(defun my-split-vertical ()
+  (interactive)
+  (split-window-vertically)
+  (other-window 1)
+  )
+(defun my-split-horizontal ()
+  (interactive)
+  (split-window-horizontally)
+  (other-window 1))
+(global-set-key (kbd "C-x C-v") 'my-split-vertical)
+(global-set-key (kbd "C-x C-h") 'my-split-horizontal)
