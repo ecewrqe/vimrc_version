@@ -1,4 +1,4 @@
-# ローカル実行スクリプト
+# VPNを掛けて、ローカル実行スクリプト
 import requests
 import time
 import re
