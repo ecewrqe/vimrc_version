@@ -38,8 +38,8 @@ sshpass -p ${PASSWORD} scp ~/.ssh/id_rsa euewrqe@${CONNECT_IP}:~/.ssh/${HOSTNAME
 # git config soon
 
 echo "==== github initialize ===="
-git config --global user.name euewrqe
-git config --global user.email euewrqe@gmail.com
+git config --global user.name **
+git config --global user.email **
 
 
 echo "==== add new ssh id_rsa to github ===="
@@ -48,7 +48,7 @@ echo "==== add new ssh id_rsa to github ===="
 
 if test ! -e ~/Project/vimrc_version; then
     echo "==== config vimrc ===="
-    git_config_url="git@github.com:ecewrqe/vimrc_version.git"
+    git_config_url="git@github.com:**/vimrc_version.git"
     git clone ${git_config_url}
 fi
 
