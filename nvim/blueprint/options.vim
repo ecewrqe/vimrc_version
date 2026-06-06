@@ -14,6 +14,7 @@ set mouse=
 set fileformat=unix
 set fileformats=unix,dos,mac
 set completeopt=menuone,noinsert,noselect
+set whichwrap+=<,>,[,]
 
 " set backupdir=./.vimbackup/
 
