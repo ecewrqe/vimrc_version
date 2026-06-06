@@ -14,11 +14,10 @@ nnoremap <Leader>a ggVG
 nnoremap yie ggVGy
 nnoremap die ggVGd
 nnoremap cie ggVGc
+vnoremap ie ggVG
 nnoremap <Leader>die ggVG"_d
 " nnoremap <C-h> :bp<CR>
 " nnoremap <C-l> :bn<CR>
-
-
 
 vnoremap <Leader>d "_d
 vnoremap <Leader>D "_D
@@ -27,20 +26,8 @@ vnoremap <Leader>C "_C
 vnoremap <Leader>x "_x
 vnoremap <Leader>s "_s
 vnoremap <Leader>S "_S
-vnoremap <Leader>a ggVG
 
-" select all the buffer
-nnoremap <Leader>n bi
-nnoremap <Leader>m ea
-nnoremap <Leader>N Bi
-nnoremap <Leader>M Ea
-"noremap <Leader>T :terminal<CR>
-noremap <Leader>lsp :vsp<CR>
-noremap <Leader>bsp :sp<CR>
-
-" noremap <C-t>l :vsp<CR>:terminal<CR>
-" tnoremap <C-t> exit<CR><CR>
-" noremap <C-t>b :sp<CR>:terminal<CR>
+map <C-S-2> :terminal<CR>
 nnoremap <C-k><C-k> :e $MYVIMRC<CR>
 
 let g:netrw_banner=0
@@ -50,18 +37,9 @@ let g:markdown_fenced_language = ['javascript', 'js=javascript', 'json=javascrip
 " gj gk gt gT gJ gI bp|bn
 tnoremap <Esc> <C-\><C-n>
 
-" commadn mode movement like emacs
-cnoremap <C-F> <Right>
-cnoremap <C-B> <Left>
-cnoremap <C-A> <Home>
-cnoremap <A-B> <S-Left>
-cnoremap <A-F> <S-Right>
-cnoremap <Esc>b <S-Left>
-cnoremap <Esc>f <S-Right>
-cnoremap <C-D> <Del>
+" " command mode movement like emacs
 
 nnoremap <C-K><C-N> :set hlsearch!<CR>
-
 
 " puremourning/vimspector
 let g:vimspector_enable_mappings = 'HUMAN'
@@ -75,6 +53,9 @@ nnoremap <leader>d_ :call vimspector#Restart()<CR>
 nnoremap <leader>dn :call vimspector#Continue()<CR>
 nnoremap <leader>drc :call vimspector#ToggleBreakpoint()<CR>
 nnoremap <leader>dh :call vimspector#ToggleConditionalBreakpoint()<CR>
+
+" Emacs C-u n C-f/C-b/C-n/C-p
+
 
 " VimspectorInstall --all --force-all
 
@@ -104,14 +85,19 @@ endif
 " tpope/vim-fugitive
 nnoremap <leader>gg :G<cr>
 
-" autocmd VimEnter * NERDTree
 
 nnoremap  <Leader>ee :lua CopilotChatBuffer()<CR>
 nnoremap <Leader>cI :CopilotChat<CR>
 
-
 " nerd Tree focus
-nnoremap <Leader>t :NERDTreeToggle<CR>
+nnoremap <C-S-B> :NERDTreeToggle<CR>
+nnoremap <C-S-E> :NERDTreeFocus<CR>
+
+let g:NERDTreeDirArrowExpandable = '▶'
+let g:NERDTreeDirArrowCollapsible = '▼'
+
+" autocmd VimEnter * NERDTree
+"
 let NERDTreeIgnore = ["package-lock.json", "node_modules", "\.exe$", "\.out$"]
 
 " autocmd VimEnter * NERDTree | wincmd p
@@ -128,7 +114,7 @@ function s:nerdtree_load()
     endif
 endfunction
 
-autocmd StdinReadPre * let s:std_in=1
+" autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * call s:nerdtree_load()
 
 
