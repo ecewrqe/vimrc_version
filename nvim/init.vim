@@ -11,7 +11,7 @@ endif
 " 1 -> blinking block
 " 2 -> solid block
 " 3 -> blinking underscore
-" 4 -> solid underscore
+"  -> solid underscore
 " 5 -> blinking vertical bar
 " 6 -> solid vertical bar
 " cursor on Mode Changing
@@ -36,6 +36,7 @@ else
     source ~/.config/nvim/blueprint/plugs.vim
     source ~/.config/nvim/blueprint/colorscheme.vim
     source ~/.config/nvim/blueprint/keybind.vim
+    lua require('emacs')
     source ~/.config/nvim/blueprint/options.vim
     source ~/.config/nvim/blueprint/lsp_config.vim
     source ~/.config/nvim/blueprint/temp.vim
