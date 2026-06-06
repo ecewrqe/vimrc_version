@@ -19,15 +19,15 @@ if test ! -f ~/.ssh/id_rsa.pub ; then
     chmod 600 ~/.ssh/*
 fi
 
-echo "==== send id_rsd to host euewrqe@${CONNECT_IP} ===="
+echo "==== send id_rsd to host **@${CONNECT_IP} ===="
 # echo "scp ~/.ssh/id_rsa euewrqe@${CONNECT_IP}:~/ubuntu"
 # sshpass -p ${PASSWORD} scp ~/.ssh/id_rsa euewrqe@${CONNECT_IP}:~/ubuntu
 
 # git config soon
 
 echo "==== github initialize ===="
-git config --global user.name euewrqe
-git config --global user.email euewrqe@gmail.com
+git config --global user.name **
+git config --global user.email **
 
 
 echo "copy id_rsa.pub to github ssh keys setting"

@@ -3,8 +3,8 @@ git_config_url="https://github.com/ecewrqe/vimrc_version.git"
 # git config soon
 
 git_config_list_arr=(
-	"user.name,euewrqe"
-	"user.email,euewrqe@gmail.com"
+	"*"
+	"*"
 )
 
 for config_list in ${git_config_list_arr[@]}; do
