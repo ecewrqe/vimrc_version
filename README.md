@@ -1,8 +1,13 @@
-# vimrc_version
-効率化トリックまとめ  
-`_vimrc` 可能なエディタ：neovim, vim, gvim
+# gimmicks for life
 
-vimとgvimの場合、`_vimrc`の内容を~/.vimrc
-neovimの場合、`_vimrc`の内容を~/.config/nvim/init.vimにコーピする
+人生に思い付いた小さなギミックを積み重ねたリポジトリです。
+パソコンのあらゆるスタックに実現可能の自動化や便利な機能を提供するためのコードや設定ファイルを集めています。
 
-`vscode`はvscodeのjsonでconfig可能のところにコピペする、前提：VSCodeVim/Vim拡張機能使用可能
+- vimとemacs
+- zshとbash
+- tmux
+- git
+- docker
+- windowsとlinuxショートカット
+- その他
+
